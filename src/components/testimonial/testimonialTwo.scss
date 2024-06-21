@@ -1,0 +1,15 @@
+/* width: 59%;
+padding-left: 7%;
+height: auto;
+overflow-y: scroll;
+scrollbar-width: thin; */
+
+.feedback-block-two.d-sm-flex {
+    // height: 400px;
+    height: auto;
+    overflow-y: auto;
+    scrollbar-width: none;
+    p {
+      font-size: 15px;
+    }
+  }

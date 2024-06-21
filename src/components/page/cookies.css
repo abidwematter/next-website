@@ -1,0 +1,18 @@
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999999999999999 !important;
+  }
+
+  .toast.bg-blue.text-white.w-100.mw-100.fade.show {
+    background: #4b8ef8;
+  }
+
+  .ml-auto, .mx-auto {
+    margin-left: auto !important;
+  }
+  .mr-3, .mx-3 {
+    margin-right: 1rem !important;
+  }

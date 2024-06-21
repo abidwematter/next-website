@@ -1,0 +1,154 @@
+.slideshow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    height: 100%;
+    padding-left: 15px;
+    background-color: #ffffff;
+    margin: 2em auto;
+    border-radius: 10px;
+}
+
+.arrow-left {
+    align-self: center;
+    height: 0;
+    width: 2em;
+    padding: 0;
+    margin: 0.5em;
+    border-top: 3em solid transparent;
+    border-right: 3em solid #3A003A;
+    border-bottom: 3em solid transparent;
+    cursor: pointer;
+}
+
+.arrow-right {
+    align-self: center;
+    height: 0;
+    width: 2em;
+    padding: 0;
+    margin: 0.5em;
+    border-top: 3em solid transparent;
+    border-left: 3em solid #3A003A;
+    border-bottom: 3em solid transparent;
+    cursor: pointer;
+}
+
+.faded-left {
+    border-right: 3em solid #FFCFFF;
+}
+
+.faded-right {
+    border-left: 3em solid #FFCFFF;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0.01;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.image {
+    width: 213px;
+    height: 65px;
+    animation: appear 1.5s ease-in;
+    background: #f8fbff;
+    border-radius: 48px;
+    padding: 7px;
+
+}
+
+@media screen and (max-width: 1200px) {
+    .slideshow {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .arrow-left {
+        border-top: 1.5em solid transparent;
+        border-right: 1.5em solid #3A003A;
+        border-bottom: 1.5em solid transparent;
+    }
+
+    .arrow-right {
+        border-top: 1.5em solid transparent;
+        border-left: 1.5em solid #3A003A;
+        border-bottom: 1.5em solid transparent;
+    }
+
+    .image {
+        width: 100px;
+        height: 70px;
+    }
+
+
+}
+
+@media screen and (max-width: 630px) {
+    .image {
+        width: 93px;
+        height: 40px;
+    }
+
+
+}
+
+.fa.fa-angle-left {
+    position: relative;
+    top: 21px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.fa.fa-angle-right {
+    position: relative;
+    top: 21px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    .fa.fa-angle-left {
+        position: relative;
+        top: 14px;
+    }
+
+    .fa.fa-angle-right {
+        position: relative;
+        top: 14px;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 480px) {
+    .fa.fa-angle-left {
+        position: relative;
+        top: 14px;
+    }
+
+    .fa.fa-angle-right {
+        position: relative;
+        top: 14px;
+    }
+}
+
+.image-data {
+    animation: jumpThree 4s infinite linear;
+    min-width: 100%;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    padding: 8px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    height: 54px;
+}
+
+.img-value {
+    list-style-type: none;
+    width: 23%;
+    display: inline-block;
+    margin-left: 12px;
+}
