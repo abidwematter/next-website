@@ -1,12 +1,11 @@
 import React from 'react';
-// import BlogMasonryOne from '../blog/BlogMasonryOne'
-// import SearchInput from '../form/SearchInput'
-// import Category from '../blog/Category'
-// import Keyword from '../blog/Keyword'
-// import BannerAdd from '../blog/BannerAdd'
-// import BannerFive from '../short-banner/BannerFive'
-// import NewsLetterForm from '../form/NewsLetterForm';
-// import { Helmet } from 'react-helmet';
+import BlogMasonryOne from '../blog/BlogMasonryOne'
+import SearchInput from '../form/SearchInput'
+import Category from '../blog/Category'
+import Keyword from '../blog/Keyword'
+import BannerAdd from '../blog/BannerAdd'
+import BannerFive from '../short-banner/BannerFive'
+import NewsLetterForm from '../form/NewsLetterForm';
 import Head from 'next/head';
 import { CaseCategory, CaseStudyData } from '../../services/shared-service';
 import { useEffect } from 'react';
@@ -59,7 +58,7 @@ const CashStudies = (props) => {
       <div className="container">
         <div className="row gx-xxl-5">
           <div className="col-lg-12">
-            {/* <BlogMasonryOne data={data}/> */}
+            <BlogMasonryOne data={data}/>
             <div className="page-pagination-one col-md-6 mx-auto">
             <ul className="d-flex align-items-center style-none">
               <li >

@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { Inter } from "next/font/google";
 import BootstrapClient from '@/components/BootstrapClient.js';
-import "./globals.css";
 import "@/assets/main.scss"
 
 
