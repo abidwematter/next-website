@@ -27,14 +27,14 @@ import Video from './Video';
 // import Management from './Management';
 // import FAQ from './FAQ';
 // import AboutUs from './AboutUs';
-// import Calculator from './Calculator';
+import Calculator from './Calculator';
 // import Calendar from './Calendar';
 import PodCost from './PodCost';
 import FooterTwo from '../footer/FooterTwo';
 // import TestimonialVideo from './TestimonialVideo';
-// import WinnersVideo from './WinnersVideo';
+import WinnersVideo from './WinnersVideo';
 // import WinnerPhoto from './WinnerPhoto';
-// import Registartion from './Registartion';
+import Registartion from './Registartion';
 import { IMG_URL } from '../../shared/constent/img';
 // import ContactUs from './ContactUs';
 // import WinnerList from './WinnerList';
@@ -111,8 +111,17 @@ const PageComponent = () => {
 {
         pageData[0]?.page_layout == 'POD Cast' ? <PodCost data={pageData[0]} /> : ''
       }
+{
+        pageData[0]?.page_layout == 'Calculator' ? <Calculator data={pageData[0]} /> : ''
+      }
 
+{
+        pageData[0]?.page_layout == 'Registartion' ? <Registartion data={pageData[0]} /> : ''
+      }
 
+{
+        pageData[0]?.page_layout == 'Company Video' ? <WinnersVideo data={pageData[0]} /> : ''
+      }
       
 
 
