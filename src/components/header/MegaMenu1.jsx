@@ -18,7 +18,6 @@ const ThemeMainMenu1 = () => {
         getHomeSetting();
         MainMenu().then((res) => {
             setMenu(res)
-            console.log(res)
 
         });
     }, [])

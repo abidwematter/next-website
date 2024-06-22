@@ -90,7 +90,7 @@ const PortfolioGalleryFive = (props) => {
                     
                     <div
                         id="isotop-gallery-wrapper"
-                        class="row">
+                        className="row">
                                 {props?.data?.map((val, i) => (
                                     <div
                                         key={i}

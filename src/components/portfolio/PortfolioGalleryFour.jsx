@@ -86,7 +86,7 @@ const PortfolioGalleryFour = (props) => {
                     ))}
                 </TabList>
 
-                    <div id="isotop-gallery-wrapper" class="grid-width container custom-container">
+                    <div id="isotop-gallery-wrapper" className="grid-width container custom-container">
                         <div className="row">
                             {photoGallery && photoGallery?.map((val, i) => (
                                 <div

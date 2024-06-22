@@ -25,8 +25,8 @@ const ThemeMainMenu = () => {
                         <Link href="/"><img src="images/logo/logo_01.png" alt="" width={130}/></Link>
                     </div>
                 </li> */}
-            <li class="nav-item">
-                <Link class="nav-link" role="button" href="/">Home</Link></li>
+            <li className="nav-item">
+                <Link className="nav-link" role="button" href="/">Home</Link></li>
                 {
                     menu && menu.map((data, i) => (
                         <li className="nav-item dropdown" key={i}>

@@ -10,13 +10,13 @@ import { useParams } from 'next/navigation'
 import { API_CONSTANTS } from '../../shared/constent/API.CONSTENT';
 import HttpService from '../../services/http.service';
 // import NewsComponent from './newsComponent';
-// import FullWidthPage from './FullWidthPage';
+import FullWidthPage from './FullWidthPage';
 // import Services from './Services';
 // import Blog from './Blog';
 import Testimonial from './Testimonial';
 import CashStudies from './CashStudies';
-// import EventVideo from './EventVideo'; 
-// import Video from './Video';
+import EventVideo from './EventVideo'; 
+import Video from './Video';
 // import EventPhoto from './EventPhoto';
 // import Founder from './Founder';
 // import Investors from './Investors';
@@ -45,7 +45,6 @@ const PageComponent = () => {
 
 
   let slug = useParams();
-  console.log(slug.pageComponent, "abid slug")
   const [pageData, setPageData] = useState([]);
   let img = IMG_URL
 
@@ -100,6 +99,18 @@ const PageComponent = () => {
       {
         pageData[0]?.page_layout == 'Case Studies' ? <CashStudies data={pageData[0]} /> : ''
       }
+
+{
+        pageData[0]?.page_layout == 'Video' ? <Video data={pageData[0]} /> : ''
+      }
+
+{
+        pageData[0]?.page_layout == 'Why We Video' ? <EventVideo data={pageData[0]} /> : ''
+      }
+
+
+
+      
 
 
       {/* ***************************************************************************** */}
