@@ -57,7 +57,7 @@ const TopNavTwo = () => {
                                 <div className="right-widget d-flex align-items-center">
                                      <div className="lang-dropdown me-3 me-sm-4">
                                         
-                                        {/* <Link className="contact-slaes" to="/registration">Contact Sales</Link> */}
+                                        {/* <Link className="contact-slaes" href="/registration">Contact Sales</Link> */}
                                     </div> 
                                     <button
                                         className="menu-search-btn tran3s m0"

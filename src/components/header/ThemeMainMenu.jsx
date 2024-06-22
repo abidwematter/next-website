@@ -26,7 +26,7 @@ const ThemeMainMenu = () => {
                     </div>
                 </li> */}
             <li class="nav-item">
-                <Link class="nav-link" role="button" href="/">Home  </Link></li>
+                <Link class="nav-link" role="button" href="/">Home</Link></li>
                 {
                     menu && menu.map((data, i) => (
                         <li className="nav-item dropdown" key={i}>

@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
+import Link from 'next/link';
 
 
 import './MegaMenu.css'
@@ -17,6 +18,8 @@ const ThemeMainMenu1 = () => {
         getHomeSetting();
         MainMenu().then((res) => {
             setMenu(res)
+            console.log(res)
+
         });
     }, [])
 
@@ -32,9 +35,9 @@ const ThemeMainMenu1 = () => {
                 <ul className="navbar-nav me-auto ps-lg-0" style={{ paddingLeft: '0.15rem' }}>
                     <li>
                         <div className="logo" >
-                            <a href="/"  style={{verticalAlign: 'middle'}}>
+                            <Link href="/"  style={{verticalAlign: 'middle'}}>
                                 <img style={{width:'200px', height: '40px', marginTop: '5px'}} src={`${img}${homeSetting[0]?.logo}`} alt=""  />
-                            </a>
+                            </Link>
                         </div>
                     </li>
                     {/* <li className="nav-item">
@@ -47,44 +50,45 @@ const ThemeMainMenu1 = () => {
                                     data?.sub_menu && data?.sub_menu?.length > 0 ?
                                         <>
                                             {data?.menu_type == 'Page' ?
-                                                <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button"
-                                                    data-mdb-toggle="dropdown" aria-expanded="false">{data?.page_name}</a> :
-                                                <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button"
-                                                    data-mdb-toggle="dropdown" aria-expanded="false">{data?.menu_name}</a>
+                                                <li className="nav-link dropdown-toggle" id="navbarDropdown" role="button" 
+                                                    data-mdb-toggle="dropdown" aria-expanded="false">{data?.page_name}</li> :
+                                                <li className="nav-link dropdown-toggle" id="navbarDropdown" role="button" 
+                                                    data-mdb-toggle="dropdown" aria-expanded="false">{data?.menu_name} </li>
                                             }
 
                                             <div className={className} aria-labelledby="navbarDropdown"  >
                                                 <div className="container">
                                                     <div className="row">
                                                         {data?.sub_menu && data?.sub_menu.map((val, i) => (
-                                                            <div className="col-md-3 col-lg-3 mb-3 " key={i}>
+                                                            <div className="col-md-3 col-lg-3 mb-3 "  key={i} >
                                                                 {
                                                                     val.sub_sub_menu && val.sub_sub_menu.length > 0 ?
                                                                         <>
                                                                             <div className="list-group list-group-flush headings-data">
                                                                                 {val?.menu_type == 'Page' ?
                                                                                     <>
-                                                                                        <a className="list-group-item-action" id="navbarDropdown" role="button" style={{color:'#02274a', fontWeight:'600'}}
-                                                                                            data-mdb-toggle="dropdown" aria-expanded="false" href={val?.page_slug}>{val?.page_name}</a></>
-                                                                                    : <> <a className="list-group-item-action" style={{color:'#02274a', fontWeight:'600'}} href={val?.menu_url} role="button">{val?.menu_name}</a></>
+                                                                                        <Link className="list-group-item-action"  id="navbarDropdown" role="button" style={{color:'#02274a', fontWeight:'600'}} 
+                                                                                            data-mdb-toggle="dropdown" aria-expanded="false" href={val?.page_slug}>{val?.page_name}</Link></>
+                                                                                    : <> <Link className="list-group-item-action" style={{color:'#02274a', fontWeight:'600'}} href={val?.menu_url} role="button">{val?.menu_name}</Link></>
                                                                                 }
                                                                                 {val.sub_sub_menu && val.sub_sub_menu.map((item, i) => (
                                                                                     <div key={i}>
                                                                                         {
-                                                                                            item.sub_sub_sub_menu && item.sub_sub_sub_menu.length > 0
+                                                                                            item.sub_sub_sub_menu && item.sub_sub_sub_menu.length > 0 
                                                                                                 ?
                                                                                                 <>
                                                                                                     {item?.menu_type == 'Page' ?
-                                                                                                        <a className="list-group-item-action" href={item?.page_slug} style={{color:'#02274a', fontWeight:'600'}} role="button">{item?.page_name}</a>
-                                                                                                        : <a className="list-group-item-action" href={item?.menu_url} style={{color:'#02274a', fontWeight:'600'}} role="button">{item?.menu_name}</a>
+                                                                                                        <Link className="list-group-item-action" href={item?.page_slug} style={{color:'#02274a', fontWeight:'600'}} role="button">{item?.page_name}</Link>
+                                                                                                        : <Link className="list-group-item-action" href={item?.menu_url} style={{color:'#02274a', fontWeight:'600' }} role="button">{item?.menu_name}</Link>
 
                                                                                                     }
                                                                                                     <ul>
                                                                                                         {item.sub_sub_sub_menu && item.sub_sub_sub_menu.map((ele, i) => (
                                                                                                             <li key={i}>
                                                                                                                 {ele?.menu_type == 'Page' ?
-                                                                                                                    <a className="list-group-item-action" href={ele?.page_slug} role="button">{ele?.page_name}</a> :
-                                                                                                                    <a className="list-group-item-action" href={ele?.menu_url} role="button">{ele?.menu_name}</a>
+                                                                                                                    <Link className="list-group-item-action"  
+                                                                                                                    href={ele?.page_slug} role="button">{ele?.page_name}</Link> :
+                                                                                                                    <Link className="list-group-item-action" href={ele?.menu_url} role="button">{ele?.menu_name}</Link>
                                                                                                                 }
                                                                                                             </li>
                                                                                                         ))}
@@ -93,8 +97,8 @@ const ThemeMainMenu1 = () => {
                                                                                                 :
                                                                                                 <>
                                                                                                     {item?.menu_type == 'Page' ?
-                                                                                                        <a className="list-group-item-action" href={"/" + item?.page_slug} role="button">{item?.page_name}</a> :
-                                                                                                        <a className="list-group-item-action" href={item?.menu_url} role="button">{item?.menu_name}</a>
+                                                                                                        <Link className="list-group-item-action" href={"/" + item?.page_slug} role="button">{item?.page_name}</Link> :
+                                                                                                        <Link className="list-group-item-action" href={item?.menu_url} role="button">{item?.menu_name}</Link>
                                                                                                     }
                                                                                                 </>
                                                                                         }
@@ -106,11 +110,11 @@ const ThemeMainMenu1 = () => {
                                                                         : <>
                                                                             {val?.menu_type == 'Page' ?
                                                                                 <div className="list-group list-group-flush headings-data">
-                                                                                    <a className="list-group-item-action" href={"/" + val?.page_slug} role="button">{val?.page_name}</a>
+                                                                                    <Link className="list-group-item-action" href={"/" + val?.page_slug} role="button">{val?.page_name}</Link>
                                                                                 </div>
                                                                                 :
                                                                                 <div className="list-group list-group-flush headings-data">
-                                                                                    <a className="list-group-item-action" href={val?.menu_url} role="button">{val?.menu_name}</a>
+                                                                                    <Link className="list-group-item-action" href={val?.menu_url} role="button">{val?.menu_name}</Link>
                                                                                 </div>
                                                                             }
                                                                         </>}
@@ -122,9 +126,9 @@ const ThemeMainMenu1 = () => {
                                         </> :
                                         <>
                                             {data?.menu_type == 'Page' ?
-                                                <a className="nav-link dropdown-toggle" href={data?.page_slug} role="button">{data?.page_name}</a> :
-                                                <a className="nav-link dropdown-toggle" href={data?.menu_url} id="navbarDropdown" role="button"
-                                                    data-mdb-toggle="dropdown" aria-expanded="false">{data?.menu_name}</a>
+                                                <Link className="nav-link dropdown-toggle" href={data?.page_slug} role="button">{data?.page_name}</Link> :
+                                                <Link className="nav-link dropdown-toggle" href={data?.menu_url} id="navbarDropdown" role="button"
+                                                    data-mdb-toggle="dropdown" aria-expanded="false">{data?.menu_name}</Link>
                                             }
                                         </>
                                 }
