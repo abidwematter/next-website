@@ -29,7 +29,7 @@ import Video from './Video';
 // import AboutUs from './AboutUs';
 // import Calculator from './Calculator';
 // import Calendar from './Calendar';
-// import PodCost from './PodCost';
+import PodCost from './PodCost';
 import FooterTwo from '../footer/FooterTwo';
 // import TestimonialVideo from './TestimonialVideo';
 // import WinnersVideo from './WinnersVideo';
@@ -108,6 +108,9 @@ const PageComponent = () => {
         pageData[0]?.page_layout == 'Why We Video' ? <EventVideo data={pageData[0]} /> : ''
       }
 
+{
+        pageData[0]?.page_layout == 'POD Cast' ? <PodCost data={pageData[0]} /> : ''
+      }
 
 
       
