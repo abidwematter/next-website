@@ -17,7 +17,7 @@ import Testimonial from './Testimonial';
 import CashStudies from './CashStudies';
 import EventVideo from './EventVideo'; 
 import Video from './Video';
-// import EventPhoto from './EventPhoto';
+import EventPhoto from './EventPhoto';
 // import Founder from './Founder';
 // import Investors from './Investors';
 // import Partners from './Partners';
@@ -31,9 +31,9 @@ import Calculator from './Calculator';
 // import Calendar from './Calendar';
 import PodCost from './PodCost';
 import FooterTwo from '../footer/FooterTwo';
-// import TestimonialVideo from './TestimonialVideo';
+import TestimonialVideo from './TestimonialVideo';
 import WinnersVideo from './WinnersVideo';
-// import WinnerPhoto from './WinnerPhoto';
+import WinnerPhoto from './WinnerPhoto';
 import Registartion from './Registartion';
 import { IMG_URL } from '../../shared/constent/img';
 // import ContactUs from './ContactUs';
@@ -124,6 +124,17 @@ const PageComponent = () => {
       }
       
 
+      {
+        pageData[0]?.page_layout == 'Awards Video' ? <TestimonialVideo data={pageData[0]} /> : ''
+      }
+      
+      
+      {
+        pageData[0]?.page_layout == 'Winner Photo' ? <WinnerPhoto data={pageData[0]} /> : ''
+      }
+      {
+        pageData[0]?.page_layout == 'Event Photo' ? <EventPhoto data={pageData[0]} /> : ''
+      }
 
       {/* ***************************************************************************** */}
 
