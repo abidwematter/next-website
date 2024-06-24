@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
-import {Helmet} from 'react-helmet';
-import {Link} from 'react-router-dom';
+import Head from 'next/head';
+import Link from 'next/link'
 
 import TopNavFour from '../../../components/header/TopNavFour';
 import PortfolioGalleryFive from '../../../components/portfolio/PortfolioGalleryFive';
@@ -14,9 +14,9 @@ const PortfolioMasonry = () => {
     return (
         <Fragment>
             <div className="main-page-wrapper">
-                <Helmet>
+                <Head>
                     <title>Portfolio 2 Column || Sinco - Data Science & Analytics React Template</title>
-                </Helmet>
+                </Head>
                 {/* helmet end */}
 
                 <TopNavFour/> 
@@ -28,7 +28,7 @@ const PortfolioMasonry = () => {
                         </h2>
                         <ul className="page-breadcrumb style-none d-flex">
                             <li>
-                                <Link to="/">Home</Link>
+                                <Link href="/">Home</Link>
                             </li>
                             <li className="current-page">Portfolio</li>
                         </ul>

@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react';
-import {Helmet} from 'react-helmet';
-
+import Head from 'next/head';
 import TopNavFour from '../../../components/header/TopNavFour';
 import InnerBanner from '../../../components/page-title/InnerBanner';
 import BlogMasonryOne from '../../../components/blog/BlogMasonryOne';
@@ -12,6 +11,7 @@ import NewsLetterForm from '../../../components/form/NewsLetterForm';
 import BannerFive from '../../../components/short-banner/BannerFive';
 import FooterFour from '../../../components/footer/FooterFour';
 import CopyRightFour from '../../../components/footer/CopyRightFour';
+import Head from 'next/head';
 
 
 
@@ -19,9 +19,9 @@ const BlogMasonry = () => {
     return (
         <Fragment>
             <div className="main-page-wrapper">
-                <Helmet>
+                <Head>
                     <title>Blog Masonry || Sinco - Data Science & Analytics React Template</title>
-                </Helmet>
+                </Head>
                 {/* helmet end */}
 
                 <TopNavFour/> {/* theme-menu-four */}

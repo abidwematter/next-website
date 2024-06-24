@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import {Helmet} from 'react-helmet';
+import Head from 'next/head';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
@@ -29,9 +29,9 @@ const PortfolioSingle = () => {
         onMovePrevRequest={() => setPhotoIndex((photoIndex + images.length - 1) % images.length)}
         onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % images.length)}/>)}
             <div className="main-page-wrapper">
-                <Helmet>
+                <Head>
                     <title>Portfolio Single || Sinco - Data Science & Analytics React Template</title>
-                </Helmet>
+                </Head>
                 {/* helmet end */}
 
                 <TopNavFour/> {/* theme-menu-four */}

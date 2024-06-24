@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {Helmet} from 'react-helmet';
+import Head from 'next/head';
 import CopyRightFour from '../../../components/footer/CopyRightFour';
 import FooterFour from '../../../components/footer/FooterFour';
 import NewsLetterForm from '../../../components/form/NewsLetterForm';
@@ -13,9 +13,9 @@ const OurPricing = () => {
     return (
         <Fragment>
             <div className="main-page-wrapper">
-                <Helmet>
+                <Head>
                     <title>Our Pricing || Sinco - Data Science & Analytics React Template</title>
-                </Helmet>
+                </Head>
                 {/* helmet end */}
 
                 <TopNavFour/> {/* theme-menu-four */}

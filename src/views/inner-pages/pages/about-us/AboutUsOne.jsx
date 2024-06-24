@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
-import {Helmet} from 'react-helmet';
-import {Link} from 'react-router-dom';
+import Head from next
+import Link from 'next/link'
 
 import TopNavOne from '../../../../components/header/TopNavOne'
 import InnerBanner from '../../../../components/page-title/InnerBanner';
@@ -14,15 +14,16 @@ import BrandSix from '../../../../components/brand/BrandSix';
 import AdressOne from '../../../../components/adress/AdressOne';
 import Info from '../../../../components/adress/Info';
 import FooterTwo from '../../../../components/footer/FooterTwo';
+import next from 'next';
 
 const AboutUsOne = () => {
     return (
         <Fragment>
             <div className="main-page-wrapper">
 
-                <Helmet>
+                <Head>
                     <title>About Us One || Sinco - Data Science & Analytics React Template</title>
-                </Helmet>
+                </Head>
 
                 <TopNavOne/> {/* theme-menu-one */}
 

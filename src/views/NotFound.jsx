@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import Link from 'next/link'
 
 const NotFound = () => {
     return (
@@ -11,7 +11,7 @@ const NotFound = () => {
                     <h2>Opps! you’r on the wrong place.</h2>
                     <p className="me-xxl-5 ms-xxl-5">Can not find what you need? Take a moment and
                         do a search below or start from our Homepage.</p>
-                    <Link to="/" className="btn-eight">Back to home</Link>
+                    <Link href="/" className="btn-eight">Back to home</Link>
                 </div>
             </div>
             <img src="images/assets/ils_21.svg" alt="" className="m-auto"/>

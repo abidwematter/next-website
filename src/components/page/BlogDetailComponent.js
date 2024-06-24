@@ -12,8 +12,7 @@ import InnerBanner from '../page-title/InnerBanner';
 // import CopyRightFour from '../footer/CopyRightFour';
 import TopNavTwo from '../header/TopNavTwo';
 // import FooterTwo from '../footer/FooterTwo';
-// import { useLocation, useParams } from 'react-router-dom';
-// import { useLocation, useParams } from 'react-router-dom';
+
 import { useParams } from 'next/navigation'
 
 import { useEffect } from 'react';

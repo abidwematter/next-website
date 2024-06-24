@@ -6,7 +6,6 @@ import Keyword from "../blog/Keyword";
 import BannerAdd from "../blog/BannerAdd";
 import BannerFive from "../short-banner/BannerFive";
 import NewsLetterForm from "../form/NewsLetterForm";
-// import { Helmet } from 'react-helmet';
 import Head from "next/head";
 import { BlogData, CategoryData } from "../../services/shared-service";
 import { API_CONSTANTS } from "../../shared/constent/API.CONSTENT";

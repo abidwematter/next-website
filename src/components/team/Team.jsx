@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {Link} from 'react-router-dom';
+import Link from 'next/link'
 
 const TeamContent = [
     {
@@ -40,7 +40,7 @@ const Team = () => {
                    <div key={i} className="col-xl-3 col-sm-6" data-aos={val.fade} data-aos-delay={val.dataDelay}>
                    <div className="team-block-one tran3s mt-35">
                        <div className="img-meta"><img src={`images/team/${val.img}.jpg`} alt="" className="w-100"/></div>
-                       <Link to="/team-detailsl" className="team-info">
+                       <Link href="/team-detailsl" className="team-info">
                            <span className="designation-text">{val.desig}</span>
                            <span className="name tran3s">{val.name}</span>
                        </Link>

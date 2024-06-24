@@ -9,7 +9,7 @@ import FancyFeatureTwentyThree from "../../../../components/feature/FancyFeature
 import CommonCounter from "../../../../components/counter/CommonCounter";
 import TestimonialOne from "../../../../components/testimonial/TestimonialOne";
 import ContactTwo from "../../../../components/contact/ContactTwo";
-// import BrandTwo from "../../../../components/brand/BrandTwo";
+import BrandTwo from "../../../../components/brand/BrandTwo";
 import FooterFour from "../../../../components/footer/FooterFour";
 import CopyRightFour from "../../../../components/footer/CopyRightFour";
 import NewsFormTwo from "../../../../components/form/NewsFormTwo";

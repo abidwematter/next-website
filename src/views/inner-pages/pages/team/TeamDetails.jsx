@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react';
-import {Helmet} from 'react-helmet';
-
+import Head from 'next/head';
 import TopNavFour from '../../../../components/header/TopNavFour';
 import InnerBanner from '../../../../components/page-title/InnerBanner';
 import TeamDetailsOne from '../../../../components/team/TeamDetailsOne'
@@ -12,9 +11,9 @@ const TeamDetails = () => {
     return (
         <Fragment>
             <div className="main-page-wrapper">
-                <Helmet>
+                <Head>
                     <title>Team Details V1 || Sinco - Data Science & Analytics React Template</title>
-                </Helmet>
+                </Head>
                 {/* helmet end */}
 
                 <TopNavFour/> {/* theme-menu-four */}
