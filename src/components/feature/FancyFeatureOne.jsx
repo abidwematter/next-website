@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link'
 import Slider from 'react-slick';
 
 const ServiceContentOne = [
@@ -68,7 +68,7 @@ const FancyFeatureOne = () => {
                         <div
                             className="icon d-flex align-items-end justify-content-center mb-50 lg-mb-30"><img src={`images/icon/${val.icon}.svg`} alt="" className="m-auto"/></div>
                         <h5 className="mb-40">{val.title}</h5>
-                        <Link to="/service-details" className="btn-two">{val.text}
+                        <Link href="/service-details" className="btn-two">{val.text}
                             <i className={val.arrow}/></Link>
                     </div>
                     {/* /.block-style-one */}

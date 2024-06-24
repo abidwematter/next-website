@@ -1,5 +1,5 @@
 import React from 'react';
-import {Helmet} from 'react-helmet';
+import Head from 'next/head';
 
 import TopNavFour from '../../../components/header/TopNavFour';
 import InnerBanner from '../../../components/page-title/InnerBanner';
@@ -12,9 +12,9 @@ import PortfolioGalleryThree from '../../../components/portfolio/PortfolioGaller
 const Portfolio3Column = () => {
     return (
         <div className="main-page-wrapper">
-            <Helmet>
+            <Head>
                 <title>Portfolio 3 Column || Sinco - Data Science & Analytics React Template</title>
-            </Helmet>
+            </Head>
             {/* helmet end */}
 
             <TopNavFour/> {/* theme-menu-four */}

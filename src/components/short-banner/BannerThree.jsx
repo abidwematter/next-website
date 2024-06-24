@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {Link} from 'react-router-dom';
+import Link from 'next/link'
 
 const BannerThree = () => {
     return (
@@ -13,7 +13,7 @@ const BannerThree = () => {
                                     <h2 className="main-title">Get Ready to Started It’s Fast, Free &amp; very easy</h2>
                                 </div>
                                 {/* /.title-style-one */}
-                                <Link to="/contact" className="btn-six ripple-btn">Get Started
+                                <Link href="/contact" className="btn-six ripple-btn">Get Started
                                     <i className="fas fa-chevron-right"/></Link>
                             </div>
                         </div>

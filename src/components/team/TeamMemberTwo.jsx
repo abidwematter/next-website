@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from "react";
-// import { useParams } from 'react-router-dom';
 import { IMG_URL } from "../../shared/constent/img";
 import TeamModal from "../page/teamModal";
 import { useParams } from "next/navigation";

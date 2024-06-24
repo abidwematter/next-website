@@ -1,15 +1,15 @@
 import React from 'react';
-import {Helmet} from 'react-helmet';
-import {Link} from 'react-router-dom';
+import Head from 'next/head';
+import Link from 'next/link'
 
 import TopNavFour from '../../../components/header/TopNavFour';
 
 const Error = () => {
     return (
         <div className="main-page-wrapper">
-            <Helmet>
+            <Head>
                 <title>Error || Sinco - Data Science & Analytics React Template</title>
-            </Helmet>
+            </Head>
             {/* helmet end */}
 
             <TopNavFour/> 
@@ -23,7 +23,7 @@ const Error = () => {
                             <h2>Opps! you’r on the wrong place.</h2>
                             <p className="me-xxl-5 ms-xxl-5">Can not find what you need? Take a moment and
                                 do a search below or start from our Homepage.</p>
-                            <Link to="/" className="btn-eight">Back to home</Link>
+                            <Link href="/" className="btn-eight">Back to home</Link>
                         </div>
                     </div>
                     <img src="images/assets/ils_21.svg" alt="" className="m-auto"/>

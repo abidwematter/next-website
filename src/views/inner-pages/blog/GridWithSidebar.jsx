@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react';
-import {Helmet} from 'react-helmet';
-
+import Head from 'next/head';
 import TopNavFour from '../../../components/header/TopNavFour';
 import InnerBanner from '../../../components/page-title/InnerBanner';
 import BlogSidebarOne from '../../../components/blog/BlogSidebarOne';
@@ -18,9 +17,9 @@ const GridWithSidebar = () => {
     return (
         <Fragment>
             <div className="main-page-wrapper">
-                <Helmet>
+                <Head>
                     <title>Blog Two || Sinco - Data Science & Analytics React Template</title>
-                </Helmet>
+                </Head>
                 {/* helmet end */}
 
                 <TopNavFour/> {/* theme-menu-four */}

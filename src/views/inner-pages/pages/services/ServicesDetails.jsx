@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { Link, useParams } from 'react-router-dom';
 
 import TopNavFour from '../../../../components/header/TopNavFour';
 import CircularProgress from '../../../../components/skill/CircularProgress';
@@ -23,7 +22,6 @@ const ServicesDetails = (props) => {
     const [homePage, setHomePage] = useState([]);
     const [category, setCategory] = useState([]);
 
-    let slug = useParams();
     let pageData = ''
 
 

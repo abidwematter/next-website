@@ -4,7 +4,6 @@ import Head from 'next/head';
 import InnerBanner from '../page-title/InnerBanner';
 import CopyRightFour from '../footer/CopyRightFour';
 import TopNavTwo from '../header/TopNavTwo';
-import { useRouter } from 'next/router';
 
 import { useParams } from 'next/navigation'
 import { API_CONSTANTS } from '../../shared/constent/API.CONSTENT';
@@ -26,7 +25,7 @@ import EventPhoto from './EventPhoto';
 // import TeamUSA from './TeamUSA';
 // import Management from './Management';
 // import FAQ from './FAQ';
-// import AboutUs from './AboutUs';
+import AboutUs from './AboutUs';
 import Calculator from './Calculator';
 // import Calendar from './Calendar';
 import PodCost from './PodCost';
@@ -134,6 +133,10 @@ const PageComponent = () => {
       }
       {
         pageData[0]?.page_layout == 'Event Photo' ? <EventPhoto data={pageData[0]} /> : ''
+      }
+
+{
+        pageData[0]?.page_layout == 'About Us' ? <AboutUs data={pageData[0]} /> : ''
       }
 
       {/* ***************************************************************************** */}

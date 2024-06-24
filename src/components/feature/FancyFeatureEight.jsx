@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link'
 
 const FeatureContent = [
     {
@@ -35,10 +35,10 @@ const FancyFeatureEight = () => {
                         <div className="block-style-seven">
                             <div className="icon d-flex align-items-end"><img src={`images/icon/${val.icon}.svg`} alt=""/></div>
                             <h5>
-                                <Link to="/service-details">{val.title}</Link>
+                                <Link href="/service-details">{val.title}</Link>
                             </h5>
                             <p>{val.desc}</p>
-                            <Link to="/service-details" className="tran3s more-btn"><img src={`images/icon/${val.arrow}.svg`} alt=""/></Link>
+                            <Link href="/service-details" className="tran3s more-btn"><img src={`images/icon/${val.arrow}.svg`} alt=""/></Link>
                         </div>
                         {/* /.block-style-seven */}
                     </div>

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import TeamMemberTwo from "../team/TeamMemberTwo";
 import BannerFive from "../short-banner/BannerFive";
 import NewsLetterForm from "../form/NewsLetterForm";
-// import { Helmet } from "react-helmet";
 import Head from "next/head";
 import { useState } from "react";
 import PaginationComponent1 from "./pagination";

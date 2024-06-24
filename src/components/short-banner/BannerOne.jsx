@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link'
 
 const BannerOne = () => {
     return (
@@ -10,7 +10,7 @@ const BannerOne = () => {
                     <h3 className="pe-xxl-5 md-pb-20">Having Any Query! Book an appointment.</h3>
                 </div>
                 <div className="col-lg-6 text-center text-lg-end">
-                    <Link to="/contact" className="msg-btn tran3s">Send Us Message</Link>
+                    <Link href="/contact" className="msg-btn tran3s">Send Us Message</Link>
                 </div>
             </div>
         </Fragment>

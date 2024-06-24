@@ -1,5 +1,5 @@
 import React,{Fragment, useEffect, useState} from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 const ServiceContent = [
     {
@@ -53,10 +53,10 @@ const FancyFeatureSeventeen = () => {
                       className={`block-style-twelve block-space mt-30 ${val.className}`} style={{ height: `${maxHeight}px` }}>
                       <div className="icon d-flex align-items-end"><img src={`images/icon/${val.icon}.svg`} alt=""/></div>
                       <h5>
-                          <Link to="/service-details">{val.title}</Link>
+                          <Link href="/service-details">{val.title}</Link>
                       </h5>
                       <p>{val.desc}</p>
-                      <Link to="/service-details" className="tran3s more-btn"><img src="images/icon/icon_20.svg" alt=""/></Link>
+                      <Link href="/service-details" className="tran3s more-btn"><img src="images/icon/icon_20.svg" alt=""/></Link>
                   </div>
                   {/* /.block-style-twelve */}
               </div>

@@ -1,5 +1,6 @@
 import React,{Fragment} from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link'
+
 
 const ServiceContent = [
     {
@@ -48,7 +49,7 @@ const FancyFeatureThirteen = () => {
                             <Link to="/service-details">{val.title}</Link>
                         </h6>
                         <p>{val.desc}</p>
-                        <Link to="/service-details" className="read-btn tran3s"><i className={val.arrow}/></Link>
+                        <Link href="/service-details" className="read-btn tran3s"><i className={val.arrow}/></Link>
                     </div>
                     {/* /.block-style-ten */}
                 </div>

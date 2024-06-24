@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react';
-import {Link} from 'react-router-dom';
+import Link from 'next/link'
 import { IMG_URL } from '../../shared/constent/img';
 
 const FancyFeatureFour = (props) => {
@@ -16,11 +16,11 @@ const FancyFeatureFour = (props) => {
                 <div className="icon d-flex align-items-end justify-content-center">
                 <img src={`${img}${val.photo}`} alt=""/>
                 </div>
-                <Link to={`service/${val?.slug}`}>
+                <Link href={`service/${val?.slug}`}>
                     <h5>{val.name}</h5>
                 </Link>
                 <div dangerouslySetInnerHTML={{__html: (val.short_description)}} />
-                <Link to={`service/${val?.slug}`}className="more-btn"><img src="images/icon/icon_13.svg" alt="" className="tran3s"/></Link>
+                <Link href={`service/${val?.slug}`}className="more-btn"><img src="images/icon/icon_13.svg" alt="" className="tran3s"/></Link>
             </div>
             {/* /.block-style-four */}
         </div>

@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 const FancyFeatureFourteen = () => {
     return (
@@ -17,7 +17,7 @@ const FancyFeatureFourteen = () => {
                     <li>Page Load (time, size, number of requests).</li>
                     <li>Adance Data analysis operation.</li>
                 </ul>
-                <Link to="/about-two" className="btn-six ripple-btn mt-50 lg-mt-30">More about us</Link>
+                <Link href="/about-two" className="btn-six ripple-btn mt-50 lg-mt-30">More about us</Link>
             </div>
         </Fragment>
     )

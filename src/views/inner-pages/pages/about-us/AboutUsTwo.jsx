@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import Head from 'next/head';import ModalVideos from '../../../../components/ModalVideo/ModalVideos';
 import Tilt from 'react-parallax-tilt';
-import { Link } from 'react-router-dom';
+import Link from 'next/link'
 
 import TopNavFour from '../../../../components/header/TopNavFour';
 import FancyFeatureTwentyThree from '../../../../components/feature/FancyFeatureTwentyThree';
@@ -70,7 +70,7 @@ const AboutUsTwo = () => {
                                     </h2>
                                     <ul className="page-breadcrumb style-none d-flex">
                                         <li>
-                                            <Link to="/">Home</Link>
+                                            <Link href="/">Home</Link>
                                         </li>
                                         <li className="current-page">About us</li>
                                     </ul>
