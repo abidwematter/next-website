@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link'
 
 const BlockContent15 = [
     {
@@ -32,7 +32,7 @@ const BlockStyle15 = () => {
                         <div className="block-style-ten color-two ps-2 pe-2 text-center tran3s mt-10">
                             <div className="icon d-flex align-items-end"><img src={`images/icon/${val.icon}.svg`} alt="" className="m-auto"/></div>
                             <h6>
-                                <Link to="/service-details">{val.text}</Link>
+                                <Link href="/service-details">{val.text}</Link>
                             </h6>
                         </div>
                         {/* /.block-style-ten */}
