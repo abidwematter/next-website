@@ -5,6 +5,7 @@ import ThemeMainMenu1 from './MegaMenu1';
 import ThemeMainMenu from './ThemeMainMenu';
 import { HomeSetting } from '../../services/shared-service';
 import Socialicon from '../footer/socialicon';
+import ScrollToTop from '../ScrollToTop';
 const TopNavTwo = () => {
     const [navbar, setNavbar] = useState(false);
 
@@ -100,6 +101,7 @@ const TopNavTwo = () => {
                 </div>
                 {/* /.inner-content */}
             </header>
+            <ScrollToTop />
     </Fragment>
   )
 }
