@@ -24,7 +24,7 @@ const FAQ = (props) => {
   }, []);
 
   const getFaqCategory = () => {
-    FaqCategory().then((res) => {});
+    FaqCategory().then((res) => { });
   };
 
   const getHomePageData = async () => {
@@ -41,9 +41,7 @@ const FAQ = (props) => {
       </Head>
       <div className="fancy-feature-twentyFive position-relative mt-20">
         <div className="container">
-          <div
-            dangerouslySetInnerHTML={{ __html: props?.data?.page_content }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: props?.data?.page_content }} />
         </div>
       </div>
       <div className="faq-section-one mt-130 mb-150 lg-mt-80 lg-mb-80">
@@ -57,6 +55,7 @@ const FAQ = (props) => {
                       <div
                         className="block-style-five md-pb-50"
                         data-aos="fade-right"
+                        key={i} // Add key prop here
                       >
                         <div className="title-style-one">
                           <div className="sc-title-three">{val?.sec8_1}</div>
@@ -70,7 +69,6 @@ const FAQ = (props) => {
                       </div>
                     ))}
                 </div>
-
                 <div className="col-xl-8 col-lg-9" data-aos="fade-left">
                   <h3 className="faq-title">{props?.data?.page_name}</h3>
                   <FaqTwo data={faqValue} />
@@ -79,11 +77,10 @@ const FAQ = (props) => {
             </div>
           </div>
         </div>
-        {/* /.container */}
       </div>
-      {/* /.faq-section-one */}
+      {/* /.container */}
     </Fragment>
   );
-};
+}
 
 export default FAQ;

@@ -11,7 +11,6 @@ import NewsLetterForm from '../../../components/form/NewsLetterForm';
 import BannerFive from '../../../components/short-banner/BannerFive';
 import FooterFour from '../../../components/footer/FooterFour';
 import CopyRightFour from '../../../components/footer/CopyRightFour';
-import Head from 'next/head';
 
 
 

@@ -64,8 +64,8 @@ export default class ImageList extends React.Component {
                 <div className="row mt-40">
                     {
                         this.props?.data.map((image, imageindex) => (
-                            <div className="col-md-2 col-4">
-                                <div key={imageindex}>
+                            <div className="col-md-2 col-4" key={imageindex}>
+                                <div>
                                     {
                                         image?.photo ? <> 
                                             <img className="LogoIcon image-data" src={`${this.state.img}${image?.photo}`} />

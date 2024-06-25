@@ -1,4 +1,4 @@
-import React,{Fragment, useEffect, useState} from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import SearchModal from '../../components/search-modal/SearchModal';
 import MobileMenu from './MobileMenu';
 import ThemeMainMenu1 from './MegaMenu1';
@@ -6,39 +6,50 @@ import ThemeMainMenu from './ThemeMainMenu';
 import { HomeSetting } from '../../services/shared-service';
 import Socialicon from '../footer/socialicon';
 import ScrollToTop from '../ScrollToTop';
+
 const TopNavTwo = () => {
     const [navbar, setNavbar] = useState(false);
-
     const [modalIsOpen, setIsOpen] = useState(false);
+    const [homeSetting, setHomeSetting] = useState([]);
 
     const openModal = () => {
         setIsOpen(true);
     }
+
     const closeModal = () => {
-        setIsOpen(!modalIsOpen);
+        setIsOpen(false);
     }
 
-  const toggleMenu =()=>{
-    if(window.scrollY >= 68) {
-      setNavbar(true)
-    } else{
-      setNavbar(false)
+    const toggleMenu = () => {
+        if (typeof window !== 'undefined') {
+            if (window.scrollY >= 68) {
+                setNavbar(true);
+            } else {
+                setNavbar(false);
+            }
+        }
     }
-  }
 
-  const [homeSetting, setHomeSetting] = useState([])
+    useEffect(() => {
+        const getHomeSetting = async () => {
+            try {
+                const res = await HomeSetting();
+                setHomeSetting(res);
+            } catch (error) {
+                console.error('Error fetching home settings:', error);
+            }
+        };
 
-  useEffect(() => {
-      getHomeSetting();
-  }, [])
+        getHomeSetting();
 
-  const getHomeSetting = () => {
-      HomeSetting().then((res) => {
-          setHomeSetting(res)
-      })
-  }
+        if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', toggleMenu);
 
-  window.addEventListener('scroll', toggleMenu);
+            return () => {
+                window.removeEventListener('scroll', toggleMenu);
+            };
+        }
+    }, []);
   return (
     <Fragment>
         <SearchModal  isOpen={modalIsOpen} onClick={closeModal} bgColor="" />

@@ -71,7 +71,7 @@ const OurPricing = () => {
                             </div>
                             <div className="row">
                                 <div className="col-xxl-5 col-xl-6 col-lg-7 m-auto">
-                                    <p className="info mt-75 lg-mt-50" data-aos="fade-up">We've done it carefully
+                                    <p className="info mt-75 lg-mt-50" data-aos="fade-up">We&apos;ve done it carefully
                                         and simply. Combined with the ingredients makes for beautiful landings.</p>
                                 </div>
                             </div>

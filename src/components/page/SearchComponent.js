@@ -16,7 +16,7 @@ import CopyRightFour from '../footer/CopyRightFour';
 import TopNavTwo from '../header/TopNavTwo';
 import FooterTwo from '../footer/FooterTwo';
 
-import { useSearchParams } from 'next/navigation';
+// import { useSearchParams } from 'next/navigation';
 
 
 
@@ -30,7 +30,7 @@ import BlogMasonryOne from '../blog/BlogMasonryOne';
 import Cookies from './Cookies';
 
 const SearchComponent = () => {
-    const { state } = useSearchParams();
+    const state = null;
     // const [data, setData] = useState([])
     const data = []
 

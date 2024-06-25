@@ -19,7 +19,7 @@ import CopyRightFour from '../../components/footer/CopyRightFour';
 import Skill from '../../components/skill/Skill';
 import { API_CONSTANTS } from '../../shared/constent/API.CONSTENT';
 import HttpService2 from '../../services/http.service';
-import { HomeBlog, HomeFaq, HomeService, HomeSetting, HomeSucessStory, HomeTestimonial, PartnerHomeData } from '../../services/shared-service';
+import { HomeBlog, HomeFaq, HomeService, HomeSetting, HomeSucessStory, HomeTestimonial, PartnerHomeData } from '../../services/shared-service2';
 // import TestimonialData from '../../components/page/testimonialData';
 // import TestimonialFive from '../../components/testimonial/TestimonialFive';
 import ImageList from '../../components/page/testimonial2';
