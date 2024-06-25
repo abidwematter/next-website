@@ -31,22 +31,24 @@ import Cookies from './Cookies';
 
 const SearchComponent = () => {
     const { state } = useSearchParams();
-    const [data, setData] = useState([])
+    // const [data, setData] = useState([])
+    const data = []
+
     console.log("check state ", state);
 
-    useEffect(() => {
-        getSerachData()
-    }, [state])
+    // useEffect(() => {
+    //     getSerachData()
+    // }, [state])
 
-    const getSerachData = async () => {
-        let url = API_CONSTANTS.serach.replace(
-            "xyz",
-            state
-        )
-        const menuData = await HttpService().GET(url);
-        console.log("check menu", menuData?.data);
-        setData(menuData?.data)
-    }
+    // const getSerachData = async () => {
+    //     let url = API_CONSTANTS.serach.replace(
+    //         "xyz",
+    //         state
+    //     )
+    //     const menuData = await HttpService().GET(url);
+    //     console.log("check menu", menuData?.data);
+    //     setData(menuData?.data)
+    // }
 
     return (
         <Fragment>

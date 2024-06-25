@@ -1,9 +1,7 @@
 'use client'
-
 import React, {Fragment} from 'react';
 import { useState } from 'react';
 import Modal from 'react-modal';
-
 
 import { useRouter } from 'next/navigation'
 

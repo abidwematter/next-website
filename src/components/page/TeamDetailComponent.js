@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import TeamDetailsOne from '../team/TeamDetailsOne'
 import { API_CONSTANTS } from '../../shared/constent/API.CONSTENT';
-import { useParams } from 'react-router-dom';
 import Head from 'next/head';
 import { useParams } from "next/navigation";
 import HttpService from '../../services/http.service';
