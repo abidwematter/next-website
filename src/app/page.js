@@ -1,6 +1,6 @@
-'use client';
+'use client'; 
 import ArtificialIntelligence from "@/views/home-pages/ArtificialIntelligence";
-import ScrollToTop from "@/components/ScrollToTop";
+// import ScrollToTop from "@/components/ScrollToTop";
 import Image from "next/image";
 
 export default function Home() {

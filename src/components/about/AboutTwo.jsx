@@ -32,7 +32,7 @@ const AboutTwo = (props) => {
         </div>
         {/* /.container */}
         <div className="illustration-holder-two sm-mt-40">
-          <Image
+          {/* <Image
             src={`${imgUrl}${props?.data?.secimg4_1}`}
             alt=""
             width={100}
@@ -81,7 +81,43 @@ const AboutTwo = (props) => {
             width={100}
             height={100}
             className="shapes shape-five"
-          />
+          /> */}
+
+                <Image
+                  src={`${imgUrl}${props?.data?.secimg4_1}`} 
+                  alt="" 
+                  width={700}
+                  height={600}
+                  quality={100}
+                  // priority={true}
+                  className="main-illustration"
+                />
+                    {/* <img  src={`${imgUrl}${props?.data?.secimg4_2}`} alt="" className="shapes shape-one fortune-image" /> */}
+                    <Image 
+                      src={`${imgUrl}${props?.data?.secimg4_2}`} alt="" width={100} height={500} className="shapes shape-one fortune-image" />
+                   
+                    {/* {console.log(`${imgUrl}${props?.data?.secimg4_6}`)} */}
+                    {/* <img
+                        src={`${imgUrl}${props?.data?.secimg4_3}`}
+                        alt=""
+                        // width={300}
+                        // height={300}
+                        className="shapes shape-two"
+                        data-aos="fade-up"
+                        data-aos-anchor=".fancy-feature-two"
+                        data-aos-delay={100}
+                        data-aos-duration={2000}
+                    />
+                    <img 
+                        src={`${imgUrl}${props?.data?.secimg4_4}`}
+                        alt=""
+                        className="shapes shape-three"
+                        data-aos="fade-up"
+                        data-aos-anchor=".fancy-feature-two"
+                        data-aos-delay={150}
+                        data-aos-duration={2000}/>
+                    <img  src={`${imgUrl}${props?.data?.secimg4_5}`} alt="" className="shapes shape-four"/>
+                    <img  src={`${imgUrl}${props?.data?.secimg4_6}`} alt="" className="shapes shape-five"/> */}
         </div>
         {/* /.illustration-holder-two */}
       </div>
