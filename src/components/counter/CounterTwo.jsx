@@ -1,3 +1,4 @@
+
 import React from "react";
 import CommonCounter from "./CommonCounter";
 import Image from "next/image";

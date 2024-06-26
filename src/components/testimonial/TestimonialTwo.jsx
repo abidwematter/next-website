@@ -1,3 +1,6 @@
+'use client';
+
+
 import React, { Fragment, useRef, useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import ModalVideos from '../ModalVideo/ModalVideos';

@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import './testimonial2.scss'
 import { IMG_URL } from "../../shared/constent/img";

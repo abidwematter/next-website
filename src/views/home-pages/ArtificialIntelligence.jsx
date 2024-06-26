@@ -1,27 +1,35 @@
-import React, { useEffect, useState } from "react";
+'use server';
+// import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+
+
 import TopNavTwo from "../../components/header/TopNavTwo";
-import HeroBannerTwo from "../../components/hero-banner/HeroBannerTwo";
-import CounterTwo from "../../components/counter/CounterTwo";
-// import BrandThree from '../../components/brand/BrandThree';
-// import FancyFeatureFour from '../../components/feature/FancyFeatureFour';
-import AboutTwo from "../../components/about/AboutTwo";
 import TestimonialTwo from "../../components/testimonial/TestimonialTwo";
-// import TestimonialOne from '../../components/testimonial/TestimonialOne';
-import FancyFeatureSix from "../../components/feature/FancyFeatureSix";
-// import TestimonialThree from '../../components/testimonial/TestimonialThree';
-import Faq from '../../components/faq/Faq';
-import BlogTwo from '../../components/blog/BlogTwo';
-import CallToAction2 from '../../components/call-to-action/CallToAction2';
 import FooterTwo from '../../components/footer/FooterTwo';
 import CopyRightFour from '../../components/footer/CopyRightFour';
+import Faq from '../../components/faq/Faq';
+import CounterTwo from "../../components/counter/CounterTwo";
+
+
+
+
+
+
+import HeroBannerTwo from "../../components/hero-banner/HeroBannerTwo";
+import FancyFeatureSix from "../../components/feature/FancyFeatureSix";
+import AboutTwo from "../../components/about/AboutTwo";
+import BlogTwo from '../../components/blog/BlogTwo';
+import CallToAction2 from '../../components/call-to-action/CallToAction2';
 import Skill from '../../components/skill/Skill';
+
+
+
 import { API_CONSTANTS } from '../../shared/constent/API.CONSTENT';
 // import HttpService from '../../services/http.service';
 
 import HttpFetchService from "../../services/http-fetch-service";
-import { HomeSetting, HomeBlog, HomeService,  HomeFaq, HomeSucessStory,PartnerHomeData} from '../../services/shared-fetch-service';
+import { HomeSetting, HomeBlog, HomeService,  HomeFaq, HomeSucessStory,PartnerHomeData, HomePage} from '../../services/shared-fetch-service.js';
 
 import {  HomeTestimonial,  } from '../../services/shared-service';
 // import TestimonialData from '../../components/page/testimonialData';
@@ -43,93 +51,120 @@ import shape15 from "@/assets/images/shape/shape_15.svg";
 import shape16 from "@/assets/images/shape/shape_16.svg";
 import shape17 from "@/assets/images/shape/shape_17.svg";
 
-const ArtificialIntelligence = () => {
-  const [homePage, setHomePage] = useState([]);
+
+
+
+
+// const getHomePageData = async () => {
+//   HomePage().then((res) => {
+//     return res;
+//   });
+// };
+
+// const getHomeSetting = async () => {
+//   HomeSetting().then((res) => {
+//     return res;
+//   });
+// };
+
+
+// const getHomeTestimonial = async () => {
+//   HomeTestimonial().then((res) => {
+//     return res;
+//   });
+// };
+
+// const getHomeBlog = async () => {
+//   HomeBlog().then((res) => {
+//     return res;
+//   });
+// };
+
+
+// const getHomeServices = async () => {
+//   HomeService().then((res) => {
+//     return res;
+//   });
+// };
+
+
+// const getHomeFaq = async () => {
+//   HomeFaq().then((res) => {
+//     return res;
+//   });
+// };
+
+
+// const getHomeSucessStory = async () => {
+//   HomeSucessStory().then((res) => {
+//     return res;
+//   });
+// };
+
+// const getPartnetData = async () => {
+//   PartnerHomeData().then((res) => {
+//     return res;
+//   });
+// };
+
+
+
+const ArtificialIntelligence = async () => {
+
+
   const imgUrl = "https://api.we-matter.com/assets/admin/uploads/";
-  const [homeTestimonial, setHomeTestimonial] = useState([]);
-  const [homeService, setHomeService] = useState([]);
-  const [homeSucessStory, setHomeSucessStory] = useState([]);
-  const [homeFaq, setHomeFaq] = useState([]);
-  const [homeBlog, setHomeBlog] = useState([]);
-  const [partnerData, setPartnerData] = useState([]);
-  const [homeSetting, setHomeSetting] = useState([]);
-  const [showComponent, setShowComponent] = useState(false);
-  useEffect(() => {
-    getHomeSetting();
-    getHomePageData();
-    getHomeTestimonial();
-    getHomeServices();
-    getHomeSucessStory();
-    getHomeFaq();
-    getHomeBlog();
-    getPartnetData();
-  }, []);
-
-  useEffect(() => {
-    // Set the delay time in milliseconds (e.g., 3000ms = 3 seconds)
-    const delay = 1000;
-
-    const timeoutId = setTimeout(() => {
-      setShowComponent(true);
-    }, delay);
-
-    // Clear the timeout if the component unmounts before the delay
-    return () => clearTimeout(timeoutId);
-  }, []);
 
 
-  const getHomePageData = async () => {
-    let url = API_CONSTANTS.homepage;
-    const menuData = await HttpFetchService().GET(url);
-    setHomePage(menuData);
-};
+
+  const homePage = await HomePage();
+  const homeService = await HomeService();
+  const homeSucessStory = await HomeSucessStory();
+  const homeFaq = await HomeFaq();
+  const homeBlog = await HomeBlog();
+  const partnerData = await PartnerHomeData();
+  const homeSetting = await HomeSetting();
 
 
-  const getHomeSetting = () => {
-    HomeSetting().then((res) => {
-      setHomeSetting(res);
-    });
-  };
-
-  
-  const getHomeTestimonial = async () => {
-    HomeTestimonial().then((res) => {
-      setHomeTestimonial(res);
-    });
-  };
-
-  const getHomeBlog = async () => {
-    HomeBlog().then((res) => {
-      setHomeBlog(res);
-    });
-  };
 
 
-  const getHomeServices = async () => {
-    HomeService().then((res) => {
-      setHomeService(res);
-    });
-  };
+
+  // const [homePage, setHomePage] = useState([]);
+  // const [homeTestimonial, setHomeTestimonial] = useState([]);
+  // const [homeService, setHomeService] = useState([]);
+  // const [homeSucessStory, setHomeSucessStory] = useState([]);
+  // const [homeFaq, setHomeFaq] = useState([]);
+  // const [homeBlog, setHomeBlog] = useState([]);
+  // const [partnerData, setPartnerData] = useState([]);
+  // const [homeSetting, setHomeSetting] = useState([]);
+  // const [showComponent, setShowComponent] = useState(false);
 
 
-  const getHomeFaq = async () => {
-    HomeFaq().then((res) => {
-      setHomeFaq(res);
-    });
-  };
+
+  // useEffect(() => {
+  //   getHomeSetting();
+  //   getHomePageData();
+  //   getHomeTestimonial();
+  //   getHomeServices();
+  //   getHomeSucessStory();
+  //   getHomeFaq();
+  //   getHomeBlog();
+  //   getPartnetData();
+  // }, []);
 
 
-  const getHomeSucessStory = () => {
-    HomeSucessStory().then((res) => {
-      setHomeSucessStory(res);
-    });
-  };
 
-  const getPartnetData = async () => {
-    PartnerHomeData().then((res) => {
-      setPartnerData(res);
-    });
-  };
+  // useEffect(() => {
+  //   // Set the delay time in milliseconds (e.g., 3000ms = 3 seconds)
+  //   const delay = 1000;
+
+  //   const timeoutId = setTimeout(() => {
+  //     setShowComponent(true);
+  //   }, delay);
+
+  //   // Clear the timeout if the component unmounts before the delay
+  //   return () => clearTimeout(timeoutId);
+  // }, []);
+
 
 //************************************************************************** */
 
@@ -141,6 +176,7 @@ const ArtificialIntelligence = () => {
 
   return (
     <div className="main-page-wrapper">
+
       <Head>
         <title>{homeSetting[0]?.meta_title_home}</title>
         <meta name="keywords" content={homeSetting[0]?.meta_keyword_home} />
@@ -149,11 +185,14 @@ const ArtificialIntelligence = () => {
           content={homeSetting[0]?.meta_description_home}
         />
       </Head>
+
+
       <TopNavTwo />
 
       <HeroBannerTwo data={homePage} />
 
       {showComponent ? <CounterTwo /> : <span></span>}
+
       {homePage &&
         homePage.map((val, i) => (
           <div key={i}>

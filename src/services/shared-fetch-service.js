@@ -4,6 +4,14 @@ import HttpFetchService from './http-fetch-service'
 
 
 
+export const HomePage = async() => {
+    let url = API_CONSTANTS.homepage;
+    const menuData = await HttpFetchService().GET(url);
+    return menuData?.data
+}
+
+
+
 export const HomeSetting = async() => {
     let url = API_CONSTANTS.home_setting
     const menuData = await HttpFetchService().GET(url);

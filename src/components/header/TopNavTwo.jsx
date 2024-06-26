@@ -1,3 +1,5 @@
+
+'use client';
 import React, { Fragment, useEffect, useState } from 'react';
 import SearchModal from '../../components/search-modal/SearchModal';
 import MobileMenu from './MobileMenu';

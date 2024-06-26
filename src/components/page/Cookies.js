@@ -1,3 +1,4 @@
+'use client';   
 import React from 'react';
 import './cookies.css'
 import axios from "axios";

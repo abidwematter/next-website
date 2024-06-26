@@ -1,3 +1,5 @@
+'use client';
+
 import React, { Fragment, useEffect, useState } from 'react'
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
