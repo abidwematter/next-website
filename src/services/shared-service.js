@@ -135,7 +135,7 @@ export const HomeBlog = async() => {
 export const HomeSetting = async() => {
     let url = API_CONSTANTS.home_setting
     const menuData = await HttpService().GET(url);
-    return menuData
+    return menuData?.data
 }
 
 export const ServiceCategory = async() => {
