@@ -6,6 +6,7 @@ import ThemeMainMenu from './ThemeMainMenu';
 import { HomeSetting } from '../../services/shared-service';
 import Socialicon from '../footer/socialicon';
 import ScrollToTop from '../ScrollToTop';
+import TawkToClient from '@/components/TawkToClient.js';
 
 const TopNavTwo = () => {
     const [navbar, setNavbar] = useState(false);
@@ -113,6 +114,7 @@ const TopNavTwo = () => {
                 {/* /.inner-content */}
             </header>
             <ScrollToTop />
+            <TawkToClient />
     </Fragment>
   )
 }
