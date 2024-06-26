@@ -18,8 +18,8 @@ import FooterTwo from '../../components/footer/FooterTwo';
 import CopyRightFour from '../../components/footer/CopyRightFour';
 import Skill from '../../components/skill/Skill';
 import { API_CONSTANTS } from '../../shared/constent/API.CONSTENT';
-import HttpService2 from '../../services/http.service';
-import { HomeBlog, HomeFaq, HomeService, HomeSetting, HomeSucessStory, HomeTestimonial, PartnerHomeData } from '../../services/shared-service2';
+import HttpService from '../../services/http.service';
+import { HomeBlog, HomeFaq, HomeService, HomeSetting, HomeSucessStory, HomeTestimonial, PartnerHomeData } from '../../services/shared-service';
 // import TestimonialData from '../../components/page/testimonialData';
 // import TestimonialFive from '../../components/testimonial/TestimonialFive';
 import ImageList from '../../components/page/testimonial2';
@@ -75,7 +75,7 @@ const ArtificialIntelligence = () => {
 
     const getHomePageData = async () => {
         let url = API_CONSTANTS.homepage;
-        const menuData = await HttpService2().GET(url);
+        const menuData = await HttpService().GET(url);
         setHomePage(menuData?.data);
     };
 

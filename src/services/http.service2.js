@@ -7,9 +7,14 @@ const headers = {
   "Content-Type": "application/x-www-form-urlencoded"
 };
 
+
 const token = typeof window !== 'undefined' ? localStorage.getItem("token") : null;
 
-export const httpService = {
+export default function httpService() {
+
+
+
+  return {
   GET: async (url) => {
     url = baseUrlpath + url;
     try {
@@ -68,3 +73,4 @@ export const httpService = {
     }
   },
 };
+}

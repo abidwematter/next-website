@@ -5,11 +5,6 @@ import HttpService2 from './http.service'
 
 
 
-export const homePage = async() => {
-    let url = API_CONSTANTS.homepage;
-    const menuData = await HttpService2().GET(url);
-    return menuData?.data
-}
 
 export const SharedService = async() => {
     let url = API_CONSTANTS.homepage;

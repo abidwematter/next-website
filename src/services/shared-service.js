@@ -2,6 +2,8 @@ import React from 'react';
 import { API_CONSTANTS } from '../shared/constent/API.CONSTENT';
 import HttpService from './http.service'
 
+
+
 export const SharedService = async() => {
     let url = API_CONSTANTS.homepage;
     const menuData = await HttpService().GET(url);
@@ -133,7 +135,7 @@ export const HomeBlog = async() => {
 export const HomeSetting = async() => {
     let url = API_CONSTANTS.home_setting
     const menuData = await HttpService().GET(url);
-    return menuData?.data
+    return menuData
 }
 
 export const ServiceCategory = async() => {
