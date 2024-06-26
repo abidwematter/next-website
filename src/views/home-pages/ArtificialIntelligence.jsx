@@ -18,8 +18,12 @@ import FooterTwo from '../../components/footer/FooterTwo';
 import CopyRightFour from '../../components/footer/CopyRightFour';
 import Skill from '../../components/skill/Skill';
 import { API_CONSTANTS } from '../../shared/constent/API.CONSTENT';
-import HttpService from '../../services/http.service';
-import { HomeBlog, HomeFaq, HomeService, HomeSetting, HomeSucessStory, HomeTestimonial, PartnerHomeData } from '../../services/shared-service';
+// import HttpService from '../../services/http.service';
+
+import HttpFetchService from "../../services/http-fetch-service";
+import { HomeSetting, HomeBlog, HomeService,  HomeFaq, HomeSucessStory,PartnerHomeData} from '../../services/shared-fetch-service';
+
+import {  HomeTestimonial,  } from '../../services/shared-service';
 // import TestimonialData from '../../components/page/testimonialData';
 // import TestimonialFive from '../../components/testimonial/TestimonialFive';
 import ImageList from "../../components/page/testimonial2";
@@ -73,29 +77,47 @@ const ArtificialIntelligence = () => {
     return () => clearTimeout(timeoutId);
   }, []);
 
+
+  const getHomePageData = async () => {
+    let url = API_CONSTANTS.homepage;
+    const menuData = await HttpFetchService().GET(url);
+    setHomePage(menuData);
+};
+
+
   const getHomeSetting = () => {
     HomeSetting().then((res) => {
       setHomeSetting(res);
     });
   };
 
-    const getHomePageData = async () => {
-        let url = API_CONSTANTS.homepage;
-        const menuData = await HttpService().GET(url);
-        setHomePage(menuData?.data);
-    };
-
+  
   const getHomeTestimonial = async () => {
     HomeTestimonial().then((res) => {
       setHomeTestimonial(res);
     });
   };
 
-  const getHomeServices = async () => {
-    HomeService().then((res) => {
-      setHomeService(res.data);
+  const getHomeBlog = async () => {
+    HomeBlog().then((res) => {
+      setHomeBlog(res);
     });
   };
+
+
+  const getHomeServices = async () => {
+    HomeService().then((res) => {
+      setHomeService(res);
+    });
+  };
+
+
+  const getHomeFaq = async () => {
+    HomeFaq().then((res) => {
+      setHomeFaq(res);
+    });
+  };
+
 
   const getHomeSucessStory = () => {
     HomeSucessStory().then((res) => {
@@ -103,23 +125,19 @@ const ArtificialIntelligence = () => {
     });
   };
 
-  const getHomeFaq = async () => {
-    HomeFaq().then((res) => {
-      setHomeFaq(res?.data);
-    });
-  };
-
-  const getHomeBlog = async () => {
-    HomeBlog().then((res) => {
-      setHomeBlog(res?.data);
-    });
-  };
-
   const getPartnetData = async () => {
     PartnerHomeData().then((res) => {
-      setPartnerData(res?.data);
+      setPartnerData(res);
     });
   };
+
+//************************************************************************** */
+
+
+
+
+
+
 
   return (
     <div className="main-page-wrapper">

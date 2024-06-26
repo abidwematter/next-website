@@ -10,8 +10,7 @@ const headers = {
 
 const token = typeof window !== 'undefined' ? localStorage.getItem("token") : null;
 
-export default function httpService() {
-
+export default function HttpFetchService() {
 
 
   return {

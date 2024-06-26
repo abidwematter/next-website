@@ -1,51 +1,98 @@
-// import React from 'react';
-// import { API_CONSTANTS } from '../shared/constent/API.CONSTENT';
-// import HttpService2 from './http.service'
+import React from 'react';
+import { API_CONSTANTS } from '../shared/constent/API.CONSTENT';
+import HttpFetchService from './http-fetch-service'
 
 
 
+export const HomeSetting = async() => {
+    let url = API_CONSTANTS.home_setting
+    const menuData = await HttpFetchService().GET(url);
+    return menuData
+}
 
+
+export const HomeTestimonial = async() => {
+    let url = API_CONSTANTS.home_testimonial
+    const menuData = await HttpFetchService().GET(url);
+    return menuData?.data
+}
+
+export const HomeBlog = async() => {
+    let url = API_CONSTANTS.home_blog
+    const menuData = await HttpFetchService().GET(url);
+    return menuData?.data
+}
+
+
+
+export const HomeService = async() => {
+    let url = API_CONSTANTS.home_sevice
+    const menuData = await HttpFetchService().GET(url);
+    return menuData?.data
+}
+
+
+export const HomeFaq = async() => {
+    let url = API_CONSTANTS.home_faq
+    const menuData = await HttpFetchService().GET(url);
+    return menuData?.data
+}
+
+export const HomeSucessStory = async() => {
+    let url = API_CONSTANTS.home_sucess_story
+    const menuData = await HttpFetchService().GET(url);
+    return menuData?.data
+}
+
+
+export const PartnerHomeData = async() => {
+    let url = API_CONSTANTS.partners_home
+    const menuData = await HttpFetchService().GET(url);
+    return menuData?.data
+}
+
+//************************************************************************************************************* */
 
 // export const SharedService = async() => {
 //     let url = API_CONSTANTS.homepage;
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const AboutUs =  async() => {
 //     let url = API_CONSTANTS.aboutUs;
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const MainMenu =  async() => {
 //     let url = API_CONSTANTS.menu;
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const FooterMenu = async() => {
 //     let url = API_CONSTANTS.footer_menu_one
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const FooterTwoMenu = async() => {
 //     let url = API_CONSTANTS.foote_menu_two
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 
 // export const FooterThreeMenu = async() => {
 //     let url = API_CONSTANTS.footer_menu_three
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const FaqData = async() => {
 //     let url = API_CONSTANTS.faqValue
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -54,7 +101,7 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -63,13 +110,13 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const FaqCategory = async() => {
 //     let url = API_CONSTANTS.faq_category
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -79,7 +126,7 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -88,67 +135,67 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const CaseCategory = async() => {
 //     let url = API_CONSTANTS.casestudy_category
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const HomeTestimonial = async() => {
 //     let url = API_CONSTANTS.home_testimonial
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const HomeService = async() => {
 //     let url = API_CONSTANTS.home_sevice
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const Service = async(page) => {
 //     let url = API_CONSTANTS.service_pagination
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const HomeSucessStory = async() => {
 //     let url = API_CONSTANTS.home_sucess_story
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const HomeFaq = async() => {
 //     let url = API_CONSTANTS.home_faq
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const HomeBlog = async() => {
 //     let url = API_CONSTANTS.home_blog
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const HomeSetting = async() => {
 //     let url = API_CONSTANTS.home_setting
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const ServiceCategory = async() => {
 //     let url = API_CONSTANTS.service_category
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const VideoData = async() => {
 //     let url = API_CONSTANTS.video_data
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -158,7 +205,7 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -167,7 +214,7 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -176,7 +223,7 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -185,7 +232,7 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -195,13 +242,13 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const InvestorData = async() => {
 //     let url = API_CONSTANTS.investors
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -210,13 +257,13 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const IndiaData = async() => {
 //     let url = API_CONSTANTS.india
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 // export const AdvisaryData = async(page) => {
@@ -224,7 +271,7 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -233,7 +280,7 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -242,19 +289,19 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const WinnerListData = async() => {
 //     let url = API_CONSTANTS.winnerList
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // } 
 
 // export const PartnerHomeData = async() => {
 //     let url = API_CONSTANTS.partners_home
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
@@ -263,41 +310,41 @@
 //         '1',
 //         page
 //     )
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const addContactUs = async(data) => {    
 //     let url = API_CONSTANTS.contactus
-//     const menuData = await HttpService2().POST(url,data);
+//     const menuData = await HttpService().POST(url,data);
 //     return menuData?.data
 // }
 
 // export const addNewsLetter = async(data) => {    
 //     let url = API_CONSTANTS.saveNewsLetter
-//     const menuData = await HttpService2().POST(url,data);
+//     const menuData = await HttpService().POST(url,data);
 //     return menuData?.data
 // }
 // export const addRegistration = async(data) => {    
 //     let url = API_CONSTANTS.registration
-//     const menuData = await HttpService2().POST(url,data);
+//     const menuData = await HttpService().POST(url,data);
 //     return menuData?.data
 // }
 
 // export const eventPhotocat = async() => {    
 //     let url = API_CONSTANTS.eventPhotocat
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const newEventPhoto = async(url) => {    
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 
 // export const contactAddress = async() => {
 //     let url = API_CONSTANTS.contactAddress
-//     const menuData = await HttpService2().GET(url);
+//     const menuData = await HttpService().GET(url);
 //     return menuData?.data
 // }
 

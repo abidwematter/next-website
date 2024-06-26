@@ -44,7 +44,7 @@ const MobileMenu = () => {
   return (
     <Fragment>
       <div className="mobile-menu-wrapper">
-      <a href="/" className="d-block"><img src="images/logo.png" alt="" style={{"width":"130px",
+      <a href="/" className="d-block"><img  src={`${img}${homeSetting[0]?.logo}`} alt="" style={{"width":"130px",
     "marginLeft": "14px",
     "marginTop": "0px",
     "paddingTop": "6px"}}/></a>
