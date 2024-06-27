@@ -1,4 +1,4 @@
-
+'use client';
 import SearchComponent from "@/components/page/SearchComponent";
 
 

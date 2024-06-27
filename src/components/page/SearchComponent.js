@@ -20,11 +20,7 @@ import FooterTwo from '../footer/FooterTwo';
 
 
 
-import { useEffect } from 'react';
-import { API_CONSTANTS } from '../../shared/constent/API.CONSTENT';
-import HttpService from '../../services/http.service';
-import { useState } from 'react';
-import { IMG_URL } from '../../shared/constent/img';
+
 import NotFound from '../../views/NotFound';
 import BlogMasonryOne from '../blog/BlogMasonryOne';
 import Cookies from './Cookies';
