@@ -4,6 +4,15 @@ import HttpFetchService from './http-fetch-service'
 
 
 
+export const SharedService = async() => {
+    let url = API_CONSTANTS.homepage;
+    const menuData = await HttpFetchService().GET(url);
+    return menuData
+}
+
+
+
+
 export const HomePage = async() => {
     let url = API_CONSTANTS.homepage;
     const menuData = await HttpFetchService().GET(url);
@@ -60,6 +69,26 @@ export const PartnerHomeData = async() => {
     const menuData = await HttpFetchService().GET(url);
     return menuData?.data
 }
+
+export const FooterMenu = async() => {
+    let url = API_CONSTANTS.footer_menu_one
+    const menuData = await HttpFetchService().GET(url);
+    return menuData
+}
+
+export const FooterTwoMenu = async() => {
+    let url = API_CONSTANTS.foote_menu_two
+    const menuData = await HttpFetchService().GET(url);
+    return menuData
+}
+
+
+export const FooterThreeMenu = async() => {
+    let url = API_CONSTANTS.footer_menu_three
+    const menuData = await HttpFetchService().GET(url);
+    return menuData
+}
+
 
 //************************************************************************************************************* */
 

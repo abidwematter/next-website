@@ -2,20 +2,21 @@
 
 import React, { Fragment, useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
-// import CountUp from 'react-countup';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 // import CountUp from  '../../components/client-component/module-component/react-countup';
 // import VisibilitySensor from  '../../components/client-component/module-component/VisibilitySensor';
-import { SharedService } from '../../services/shared-service';
+import { SharedService } from '../../services/shared-fetch-service';
 
-const VisibilitySensor = dynamic(() => import('../../components/client-component/module-component/VisibilitySensor'), {
-    ssr: false,
-  });
+// const VisibilitySensor = dynamic(() => import('../../components/client-component/module-component/VisibilitySensor'), {
+//     ssr: false,
+//   });
 
 
-  const CountUp = dynamic(() => import('../../components/client-component/module-component/react-countup'), {
-    ssr: false,
-  });
+//   const CountUp = dynamic(() => import('../../components/client-component/module-component/react-countup'), {
+//     ssr: false,
+//   });
 
 
 

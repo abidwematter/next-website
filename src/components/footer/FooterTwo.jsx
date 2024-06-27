@@ -8,9 +8,7 @@ import { IMG_URL } from '../../shared/constent/img';
 import Socialicon from './socialicon';
 
 
-const 
-
-FooterTwo = () => {
+const FooterTwo = () => {
     const[footerOneData, setFooterOneData] = useState([]);
     const[footerTwoData, setFooterTwoData] = useState([]);
     const [homeSetting, setHomeSetting] = useState([])

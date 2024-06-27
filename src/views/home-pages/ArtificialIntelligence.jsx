@@ -6,18 +6,19 @@ import Link from "next/link";
 import { HomeSetting, HomeBlog, HomeService,  HomeFaq, HomeSucessStory,PartnerHomeData, HomePage} from '../../services/shared-fetch-service.js';
 
 //server components
+import TestimonialTwo from "../../components/testimonial/TestimonialTwo";
+import Faq from '../../components/faq/Faq';
+import CounterTwo from "../../components/counter/CounterTwo";
+import HeroBannerTwo from "../../components/hero-banner/HeroBannerTwo";
+import FancyFeatureSix from "../../components/feature/FancyFeatureSix";
+import CopyRightFour from '../../components/footer/CopyRightFour';
 
 
 
 //client components
 import TopNavTwo from "../../components/header/TopNavTwo";
-import TestimonialTwo from "../../components/testimonial/TestimonialTwo";
 import FooterTwo from '../../components/footer/FooterTwo';
-import CopyRightFour from '../../components/footer/CopyRightFour';
-import Faq from '../../components/faq/Faq';
-import CounterTwo from "../../components/counter/CounterTwo";
-import HeroBannerTwo from "../../components/hero-banner/HeroBannerTwo";
-import FancyFeatureSix from "../../components/feature/FancyFeatureSix";
+
 
 
 
