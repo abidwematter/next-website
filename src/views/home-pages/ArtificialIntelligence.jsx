@@ -1,21 +1,15 @@
 import 'server-only';
-// import React, { useEffect, useState } from "react";
+
+
+
 import Head from "next/head";
 import Link from "next/link";
-
-
 import TopNavTwo from "../../components/header/TopNavTwo";
 import TestimonialTwo from "../../components/testimonial/TestimonialTwo";
 import FooterTwo from '../../components/footer/FooterTwo';
 import CopyRightFour from '../../components/footer/CopyRightFour';
 import Faq from '../../components/faq/Faq';
 import CounterTwo from "../../components/counter/CounterTwo";
-
-
-
-
-
-
 import HeroBannerTwo from "../../components/hero-banner/HeroBannerTwo";
 import FancyFeatureSix from "../../components/feature/FancyFeatureSix";
 import AboutTwo from "../../components/about/AboutTwo";
@@ -25,13 +19,13 @@ import Skill from '../../components/skill/Skill';
 
 
 
-import { API_CONSTANTS } from '../../shared/constent/API.CONSTENT';
+// import { API_CONSTANTS } from '../../shared/constent/API.CONSTENT';
 // import HttpService from '../../services/http.service';
 
 import HttpFetchService from "../../services/http-fetch-service";
 import { HomeSetting, HomeBlog, HomeService,  HomeFaq, HomeSucessStory,PartnerHomeData, HomePage} from '../../services/shared-fetch-service.js';
 
-import {  HomeTestimonial,  } from '../../services/shared-service';
+// import {  HomeTestimonial,  } from '../../services/shared-service';
 // import TestimonialData from '../../components/page/testimonialData';
 // import TestimonialFive from '../../components/testimonial/TestimonialFive';
 import ImageList from "../../components/page/testimonial2";
@@ -112,20 +106,14 @@ import shape17 from "@/assets/images/shape/shape_17.svg";
 const ArtificialIntelligence = async () => {
 
 
-  const imgUrl = "https://api.we-matter.com/assets/admin/uploads/";
-
-
-
+  const imgUrl = "https://api.we-matter.com/assets/admin/uploads/"; 
   const homePage = await HomePage();
   const homeSetting = await HomeSetting();
-
   const homeService = await HomeService();
   const homeSucessStory = await HomeSucessStory();
   const homeFaq = await HomeFaq();
   const homeBlog = await HomeBlog();
   const partnerData = await PartnerHomeData();
-
-
 
 
 
@@ -177,9 +165,8 @@ const ArtificialIntelligence = async () => {
 
   return (
     <div className="main-page-wrapper">
-
       <Head>
-        <title>{homeSetting[0]?.meta_title_home}</title>
+        <title>{homeSetting?.[0]?.meta_title_home}</title>
         <meta name="keywords" content={homeSetting[0]?.meta_keyword_home} />
         <meta
           name="description"
@@ -194,8 +181,7 @@ const ArtificialIntelligence = async () => {
 
       {/* {showComponent ? <CounterTwo /> : <span></span>} */}
       <CounterTwo />
-
-      {homePage &&
+      {
         homePage.map((val, i) => (
           <div key={i}>
             <div className="partner-section-two mt-110">

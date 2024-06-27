@@ -80,7 +80,7 @@ export default class ImageList extends React.Component {
                     }
                     <div className="view more" style={{ textAlign: "center", animation: 'jumpThree 4s infinite linear '}}>
                         <div className="btn-three rev mt-35 lg-mt-20" >
-                            <Link href='/clients'>View More<i className="fas fa-chevron-right" /></Link>
+                            <Link href='/client-company'>View More<i className="fas fa-chevron-right" /></Link>
 
                         </div>
                     </div>

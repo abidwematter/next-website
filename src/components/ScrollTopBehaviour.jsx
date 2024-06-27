@@ -6,6 +6,7 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     const handleRouteChange = () => {
+      
       window.scrollTo(0, 0);
     };
 

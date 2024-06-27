@@ -7,7 +7,7 @@ import HttpFetchService from './http-fetch-service'
 export const HomePage = async() => {
     let url = API_CONSTANTS.homepage;
     const menuData = await HttpFetchService().GET(url);
-    return menuData?.data
+    return menuData
 }
 
 
@@ -47,13 +47,15 @@ export const HomeFaq = async() => {
 }
 
 export const HomeSucessStory = async() => {
+    console.log("running in home sucess story")
     let url = API_CONSTANTS.home_sucess_story
     const menuData = await HttpFetchService().GET(url);
-    return menuData?.data
+    return menuData
 }
 
 
 export const PartnerHomeData = async() => {
+    console.log("running in partnethomedata")
     let url = API_CONSTANTS.partners_home
     const menuData = await HttpFetchService().GET(url);
     return menuData?.data
