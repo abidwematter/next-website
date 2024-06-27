@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useState } from 'react'
 import TestimonialThree from '../testimonial/TestimonialThree'
 // import BannerFive from '../short-banner/BannerFive';

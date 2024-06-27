@@ -1,4 +1,3 @@
-'use client';
 import TeamDetailComponent from "@/components/page/TeamDetailComponent";
 import Image from "next/image";
 

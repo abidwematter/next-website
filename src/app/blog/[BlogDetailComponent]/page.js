@@ -1,4 +1,3 @@
-'use client';
 import BlogDetailComponent from '@/components/page/BlogDetailComponent';
 
 

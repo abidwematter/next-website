@@ -1,4 +1,3 @@
-'use client';
 import CategoryDetailComponent from '@/components/page/CategoryDetailComponent';
 
 

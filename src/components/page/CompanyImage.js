@@ -1,4 +1,5 @@
 
+'use client';
 
 import React, { useEffect, useState } from 'react';
 // import BannerFive from '../short-banner/BannerFive'

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useState } from 'react'
 import TeamDetailsOne from '../team/TeamDetailsOne'
 import { API_CONSTANTS } from '../../shared/constent/API.CONSTENT';

@@ -1,4 +1,3 @@
-'use client';
 import CompanyImage from '@/components/page/CompanyImage';
 
 

@@ -2,7 +2,7 @@
 
 import React, { Fragment, useEffect, useState } from 'react'
 import Link from 'next/link';
-import { FooterThreeMenu, HomeSetting } from '../../services/shared-service'
+import { FooterThreeMenu, HomeSetting } from '../../services/shared-fetch-service'
 
 const CopyRightFour = () => {
     const [footerThreeData, setFooterThreeData] = useState([]);
