@@ -1,9 +1,15 @@
 import 'server-only';
 
-
-
 import Head from "next/head";
 import Link from "next/link";
+
+import { HomeSetting, HomeBlog, HomeService,  HomeFaq, HomeSucessStory,PartnerHomeData, HomePage} from '../../services/shared-fetch-service.js';
+
+//server components
+
+
+
+//client components
 import TopNavTwo from "../../components/header/TopNavTwo";
 import TestimonialTwo from "../../components/testimonial/TestimonialTwo";
 import FooterTwo from '../../components/footer/FooterTwo';
@@ -12,25 +18,31 @@ import Faq from '../../components/faq/Faq';
 import CounterTwo from "../../components/counter/CounterTwo";
 import HeroBannerTwo from "../../components/hero-banner/HeroBannerTwo";
 import FancyFeatureSix from "../../components/feature/FancyFeatureSix";
+
+
+
 import AboutTwo from "../../components/about/AboutTwo";
 import BlogTwo from '../../components/blog/BlogTwo';
 import CallToAction2 from '../../components/call-to-action/CallToAction2';
 import Skill from '../../components/skill/Skill';
+import ImageList from "../../components/page/testimonial2";
+import Portfolio from "../../components/portfolio/portfolio";
+import Cookies from "../../components/page/Cookies";
+
+
 
 
 
 // import { API_CONSTANTS } from '../../shared/constent/API.CONSTENT';
 // import HttpService from '../../services/http.service';
+// import HttpFetchService from "../../services/http-fetch-service";
 
-import HttpFetchService from "../../services/http-fetch-service";
-import { HomeSetting, HomeBlog, HomeService,  HomeFaq, HomeSucessStory,PartnerHomeData, HomePage} from '../../services/shared-fetch-service.js';
 
 // import {  HomeTestimonial,  } from '../../services/shared-service';
 // import TestimonialData from '../../components/page/testimonialData';
 // import TestimonialFive from '../../components/testimonial/TestimonialFive';
-import ImageList from "../../components/page/testimonial2";
-import Portfolio from "../../components/portfolio/portfolio";
-import Cookies from "../../components/page/Cookies";
+
+
 import Image from "next/image";
 import shape06 from "@/assets/images/shape/shape_06.svg";
 import shape07 from "@/assets/images/shape/shape_07.svg";
@@ -47,62 +59,6 @@ import shape17 from "@/assets/images/shape/shape_17.svg";
 
 
 
-
-
-// const getHomePageData = async () => {
-//   HomePage().then((res) => {
-//     return res;
-//   });
-// };
-
-// const getHomeSetting = async () => {
-//   HomeSetting().then((res) => {
-//     return res;
-//   });
-// };
-
-
-// const getHomeTestimonial = async () => {
-//   HomeTestimonial().then((res) => {
-//     return res;
-//   });
-// };
-
-// const getHomeBlog = async () => {
-//   HomeBlog().then((res) => {
-//     return res;
-//   });
-// };
-
-
-// const getHomeServices = async () => {
-//   HomeService().then((res) => {
-//     return res;
-//   });
-// };
-
-
-// const getHomeFaq = async () => {
-//   HomeFaq().then((res) => {
-//     return res;
-//   });
-// };
-
-
-// const getHomeSucessStory = async () => {
-//   HomeSucessStory().then((res) => {
-//     return res;
-//   });
-// };
-
-// const getPartnetData = async () => {
-//   PartnerHomeData().then((res) => {
-//     return res;
-//   });
-// };
-
-
-
 const ArtificialIntelligence = async () => {
 
 
@@ -114,32 +70,6 @@ const ArtificialIntelligence = async () => {
   const homeFaq = await HomeFaq();
   const homeBlog = await HomeBlog();
   const partnerData = await PartnerHomeData();
-
-
-
-  // const [homePage, setHomePage] = useState([]);
-  // const [homeTestimonial, setHomeTestimonial] = useState([]);
-  // const [homeService, setHomeService] = useState([]);
-  // const [homeSucessStory, setHomeSucessStory] = useState([]);
-  // const [homeFaq, setHomeFaq] = useState([]);
-  // const [homeBlog, setHomeBlog] = useState([]);
-  // const [partnerData, setPartnerData] = useState([]);
-  // const [homeSetting, setHomeSetting] = useState([]);
-  // const [showComponent, setShowComponent] = useState(false);
-
-
-
-  // useEffect(() => {
-  //   getHomeSetting();
-  //   getHomePageData();
-  //   getHomeTestimonial();
-  //   getHomeServices();
-  //   getHomeSucessStory();
-  //   getHomeFaq();
-  //   getHomeBlog();
-  //   getPartnetData();
-  // }, []);
-
 
 
   // useEffect(() => {
