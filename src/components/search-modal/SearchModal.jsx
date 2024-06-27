@@ -17,7 +17,6 @@ const SearchModal = (props) => {
     }
 
     const handleChange = (e) => {
-        console.log("check e", e.target.value);
         setInputValue(e.target.value)
     }
 

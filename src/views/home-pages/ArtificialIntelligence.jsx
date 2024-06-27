@@ -1,4 +1,4 @@
-'use server';
+import 'server-only';
 // import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -117,12 +117,13 @@ const ArtificialIntelligence = async () => {
 
 
   const homePage = await HomePage();
+  const homeSetting = await HomeSetting();
+
   const homeService = await HomeService();
   const homeSucessStory = await HomeSucessStory();
   const homeFaq = await HomeFaq();
   const homeBlog = await HomeBlog();
   const partnerData = await PartnerHomeData();
-  const homeSetting = await HomeSetting();
 
 
 
@@ -191,7 +192,8 @@ const ArtificialIntelligence = async () => {
 
       <HeroBannerTwo data={homePage} />
 
-      {showComponent ? <CounterTwo /> : <span></span>}
+      {/* {showComponent ? <CounterTwo /> : <span></span>} */}
+      <CounterTwo />
 
       {homePage &&
         homePage.map((val, i) => (

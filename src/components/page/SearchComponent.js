@@ -34,7 +34,6 @@ const SearchComponent = () => {
     // const [data, setData] = useState([])
     const data = []
 
-    console.log("check state ", state);
 
     // useEffect(() => {
     //     getSerachData()
@@ -46,7 +45,6 @@ const SearchComponent = () => {
     //         state
     //     )
     //     const menuData = await HttpService().GET(url);
-    //     console.log("check menu", menuData?.data);
     //     setData(menuData?.data)
     // }
 

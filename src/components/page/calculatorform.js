@@ -21,7 +21,6 @@ const Calculatorform = () => {
             newData = (Number(employeeCount) * Number(attritionSaved))
         }
         setTotalValue(totalValue)
-        console.log("check res data", calculatedValue, newData);
     }
 
 

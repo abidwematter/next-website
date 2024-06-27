@@ -30,6 +30,7 @@
     "react-tabs": "^5.1.0",
     "react-visibility-sensor": "^5.1.1",
     "sass": "^1.77.6",
+    "server-only": "^0.0.1",
     "slick-carousel": "^1.8.1",
     "yup": "^0.32.11"
   },

@@ -1,9 +1,22 @@
 'use client';
 
 import React, { Fragment, useEffect, useState } from 'react'
-import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
+import dynamic from 'next/dynamic'
+// import CountUp from 'react-countup';
+
+// import CountUp from  '../../components/client-component/module-component/react-countup';
+// import VisibilitySensor from  '../../components/client-component/module-component/VisibilitySensor';
 import { SharedService } from '../../services/shared-service';
+
+const VisibilitySensor = dynamic(() => import('../../components/client-component/module-component/VisibilitySensor'), {
+    ssr: false,
+  });
+
+
+  const CountUp = dynamic(() => import('../../components/client-component/module-component/react-countup'), {
+    ssr: false,
+  });
+
 
 
 const CommonCounter = () => {

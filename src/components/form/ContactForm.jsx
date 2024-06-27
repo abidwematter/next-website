@@ -67,7 +67,6 @@ const ContactForm = () => {
                      document.getElementById("alert_message").innerHTML = "We received your request. We'll get back to you soon.!!";
                      //window.scrollTo({ top: 0, behavior: 'smooth' });
                      //window.location.reload();
-                    console.log(res)
                 });
         }
         catch (error) {

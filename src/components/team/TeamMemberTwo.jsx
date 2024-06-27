@@ -4,8 +4,6 @@ import TeamModal from "../page/teamModal";
 import { useParams } from "next/navigation";
 
 const TeamMemberTwo = (props) => {
-  console.log("hello user");
-  console.log(props);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [slugValue, setSlugValue] = useState("");
   let img = IMG_URL;

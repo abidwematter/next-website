@@ -33,7 +33,6 @@ const Calculator = (props) => {
     // alert(sssss);
     let calculatedValue = (Number(totalEmployee) * Number(targetedReduction)) / 100;
     setEmployeeCount(calculatedValue);
-    console.log(calculatedValue)
     if (calculatedValue) {
 
       let attritionCount = attritionSaved / 2
@@ -44,7 +43,6 @@ const Calculator = (props) => {
       setTotalValue(newData);
       // alert(newData);
       setCostAttrition(attritionCount);
-      // console.log(attritionCount)
 
     }
 // alert(newData);

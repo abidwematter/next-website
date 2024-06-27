@@ -25,7 +25,6 @@ const Video = (props) => {
 
     const getPaginatedData = (page) => {
         pageData = page
-        console.log(pageData, "pageData of abid")
         VideoData(pageData).then((res) => {
             setVideoData(res)
             setTotalRecords(res?.total);

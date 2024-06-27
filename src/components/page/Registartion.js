@@ -99,7 +99,6 @@ const Registartion = (props) => {
             .then((res) => {
               document.getElementById("newsucc_message").style.display = "block";
               document.getElementById("alert_message").innerHTML = "We received your request. We'll get back to you soon.!!";
-              console.log(res)
             });
         }
         catch (error) {
@@ -122,7 +121,6 @@ useEffect(() => {
       const countryApi = await axios.get(`https://api.we-matter.com/Api/country_list`)
       setCountryList(countryApi.data);
     } catch (error) {
-      console.log("Something is Wrong -support");
     }
   }
   getCountryList();

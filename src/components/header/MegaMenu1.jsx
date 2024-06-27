@@ -10,7 +10,6 @@ const ThemeMainMenu1 = () => {
 
     const [menu, setMenu] = useState([]);
     const [homeSetting, setHomeSetting] = useState([]);
-    console.log(homeSetting, "abid home setting set")
     const [isActive, setIsActive] = useState(true);
     let className  ='dropdown-menu mt-0'
     let img = IMG_URL

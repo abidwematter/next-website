@@ -24,7 +24,6 @@ const ContactUs = (props) => {
   const getContactAddress = () => {
     contactAddress().then((res) => {
       setContactAddressNew(res);
-      console.log("addressData", res);
     });
   };
 

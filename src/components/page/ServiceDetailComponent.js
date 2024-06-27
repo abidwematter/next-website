@@ -53,7 +53,6 @@ const ServiceDetailComponent = () => {
 
     const getServiceCategory = () => {
         Service().then((res) => {
-            console.log("check res data", res);
             setCategory(res?.data)
         })
     }

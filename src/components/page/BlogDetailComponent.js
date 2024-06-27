@@ -25,7 +25,6 @@ import ServicesDetails from '../../views/inner-pages/pages/services/ServicesDeta
 
 const BlogDetailComponent = () => {
     let slug = useParams();
-    console.log("slug blog abid", slug)
     // const location = useLocation()
     // const propsData = location.state;
     // let img = IMG_URL

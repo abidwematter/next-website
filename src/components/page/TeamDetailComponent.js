@@ -30,7 +30,6 @@ const TeamDetailComponent = (props) => {
             slug.ServiceDetailComponent
         );
         const menuData = await HttpService().GET(url);
-        console.log("check data", menuData?.data);
         setPageData(menuData?.data);
 
     }

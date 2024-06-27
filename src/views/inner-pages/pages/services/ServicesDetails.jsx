@@ -20,7 +20,6 @@ import Cookies from "../../../../components/page/Cookies";
 import { useParams } from "next/navigation";
 
 const ServicesDetails = (props) => {
-  console.log("check prosp", props);
   const [homePage, setHomePage] = useState([]);
   const [category, setCategory] = useState([]);
 

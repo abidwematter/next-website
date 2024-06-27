@@ -7,7 +7,6 @@ import 'react-image-lightbox/style.css';
 
 
 const PortfolioGalleryTwo = (props) => {
-    console.log("check props", props);
 
     return (
         <Fragment>
