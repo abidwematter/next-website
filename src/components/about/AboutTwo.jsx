@@ -1,3 +1,4 @@
+import 'server-only';
 import React, { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,6 +7,7 @@ const AboutTwo = (props) => {
   const imgUrl = "https://api.we-matter.com/assets/admin/uploads/";
   return (
     <Fragment>
+      {/* {console.log("AboutTwo")} */}
       <div className="fancy-feature-two position-relative mt-200 lg-mt-120">
         <div className="container">
           <div className="row">
@@ -83,21 +85,21 @@ const AboutTwo = (props) => {
             className="shapes shape-five"
           /> */}
 
-                <Image
-                  src={`${imgUrl}${props?.data?.secimg4_1}`} 
-                  alt="" 
-                  width={700}
-                  height={600}
-                  quality={100}
-                  // priority={true}
-                  className="main-illustration"
-                />
-                    {/* <img  src={`${imgUrl}${props?.data?.secimg4_2}`} alt="" className="shapes shape-one fortune-image" /> */}
-                    <Image 
-                      src={`${imgUrl}${props?.data?.secimg4_2}`} alt="" width={100} height={500} className="shapes shape-one fortune-image" />
-                   
-                    {/* {console.log(`${imgUrl}${props?.data?.secimg4_6}`)} */}
-                    {/* <img
+          <Image
+            src={`${imgUrl}${props?.data?.secimg4_1}`}
+            alt=""
+            width={700}
+            height={600}
+            quality={100}
+            // priority={true}
+            className="main-illustration"
+          />
+          {/* <img  src={`${imgUrl}${props?.data?.secimg4_2}`} alt="" className="shapes shape-one fortune-image" /> */}
+          <Image
+            src={`${imgUrl}${props?.data?.secimg4_2}`} alt="" width={100} height={500} className="shapes shape-one fortune-image" />
+
+          {/* {console.log(`${imgUrl}${props?.data?.secimg4_6}`)} */}
+          {/* <img
                         src={`${imgUrl}${props?.data?.secimg4_3}`}
                         alt=""
                         // width={300}
