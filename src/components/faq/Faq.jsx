@@ -1,7 +1,7 @@
-'use client';   
+'use client';
 
-import React, {Fragment} from 'react';
-import {Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel} from 'react-accessible-accordion';
+import React, { Fragment } from 'react';
+import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel } from 'react-accessible-accordion';
 
 
 const Faq = (props) => {
@@ -22,7 +22,7 @@ const Faq = (props) => {
                         </AccordionItemHeading>
                         <AccordionItemPanel className="accordion-body fadeInUp">
                             <p>
-                            <div dangerouslySetInnerHTML={{__html: (item.faq_content)}} />
+                                <p dangerouslySetInnerHTML={{ __html: (item.faq_content) }} />
                             </p>
                         </AccordionItemPanel>
                     </AccordionItem>
