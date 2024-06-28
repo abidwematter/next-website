@@ -1,11 +1,19 @@
 
 import Head from "next/head";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 import { HomeSetting, HomeBlog, HomeService, HomeFaq, HomeSucessStory, PartnerHomeData, HomePage } from '../../services/shared-fetch-service.js';
 
 //server components
-import TestimonialTwo from "../../components/testimonial/TestimonialTwo";
+// import TestimonialTwo from "../../components/testimonial/TestimonialTwo";
+
+
+
+const TestimonialTwo = dynamic(() => import("../../components/testimonial/TestimonialTwo"), {
+    ssr: false,
+  });
+
 import Faq from '../../components/faq/Faq';
 import CounterTwo from "../../components/counter/CounterTwo";
 import HeroBannerTwo from "../../components/hero-banner/HeroBannerTwo";
