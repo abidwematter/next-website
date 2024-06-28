@@ -24,6 +24,7 @@
     "react-modal": "^3.16.1",
     "react-modal-video": "^1.2.8",
     "react-parallax-tilt": "^1.7.9",
+    "react-hook-form": "^7.30.0",
     "react-pro-sidebar": "^0.7.1",
     "react-responsive-masonry": "^2.1.4",
     "react-slick": "^0.29.0",
