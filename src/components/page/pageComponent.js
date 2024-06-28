@@ -40,6 +40,11 @@ import ContactUs from "./ContactUs";
 // import WinnerList from './WinnerList';
 import Cookies from "./Cookies";
 
+// export const metadata = {
+//   title: "W.E. Matter",
+//   description: "The official Next.js Learn Dashboard built with App Router.",
+// };
+
 const PageComponent = () => {
   let slug = useParams();
   const [pageData, setPageData] = useState([]);

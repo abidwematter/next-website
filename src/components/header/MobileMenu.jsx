@@ -44,10 +44,12 @@ const MobileMenu = () => {
   return (
     <Fragment>
       <div className="mobile-menu-wrapper">
-      <a href="/" className="d-block"><img  src={`${img}${homeSetting[0]?.logo}`} alt="" style={{"width":"130px",
-    "marginLeft": "14px",
-    "marginTop": "0px",
-    "paddingTop": "6px"}}/></a>
+        <a href="/" className="d-block"><img src={`${img}${homeSetting[0]?.logo}`} alt="" style={{
+          "width": "130px",
+          "marginLeft": "14px",
+          "marginTop": "0px",
+          "paddingTop": "6px"
+        }} /></a>
         <div className="moblie-menu-toggler">
           <button className={click ? "navbar-toggler active d-block d-lg-none" : "navbar-toggler d-block d-lg-none"} type="button" onClick={handleClick}>
             <span />
@@ -62,7 +64,7 @@ const MobileMenu = () => {
               <a href="/"><img src={`${img}${homeSetting[0]?.logo}`} alt="" /></a>
             </div>
             <div className="close-menu" onClick={handleClick}>
-              <i class="bi bi-x-lg"></i>
+              <i className="bi bi-x-lg"></i>
             </div>
           </SidebarHeader>
           <SidebarContent>

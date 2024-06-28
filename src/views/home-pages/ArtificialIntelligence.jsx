@@ -2,7 +2,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import { HomeSetting, HomeBlog, HomeService,  HomeFaq, HomeSucessStory,PartnerHomeData, HomePage} from '../../services/shared-fetch-service.js';
+import { HomeSetting, HomeBlog, HomeService, HomeFaq, HomeSucessStory, PartnerHomeData, HomePage } from '../../services/shared-fetch-service.js';
 
 //server components
 import TestimonialTwo from "../../components/testimonial/TestimonialTwo";
@@ -25,8 +25,11 @@ import AboutTwo from "../../components/about/AboutTwo";
 import BlogTwo from '../../components/blog/BlogTwo';
 import CallToAction2 from '../../components/call-to-action/CallToAction2';
 import Skill from '../../components/skill/Skill';
+
 import ImageList from "../../components/page/testimonial2";
-import Portfolio from "../../components/portfolio/portfolio";
+
+// import Portfolio from "../../components/portfolio/portfolio";
+import PortfolioNew from '@/components/portfolio/PortfolioNew.jsx';
 import Cookies from "../../components/page/Cookies";
 
 
@@ -62,7 +65,7 @@ import shape17 from "@/assets/images/shape/shape_17.svg";
 const ArtificialIntelligence = async () => {
 
 
-  const imgUrl = "https://api.we-matter.com/assets/admin/uploads/"; 
+  const imgUrl = "https://api.we-matter.com/assets/admin/uploads/";
   const homePage = await HomePage();
   const homeSetting = await HomeSetting();
   const homeService = await HomeService();
@@ -85,7 +88,7 @@ const ArtificialIntelligence = async () => {
   // }, []);
 
 
-//************************************************************************** */
+  //************************************************************************** */
 
 
 
@@ -197,7 +200,8 @@ const ArtificialIntelligence = async () => {
                         </div>
                       </div>
                       {/* <FancyFeatureFour data={homeService} /> */}
-                      <Portfolio data={homeService} />
+                      {/* <Portfolio data={homeService} /> */}
+                      <PortfolioNew data={homeService} />
                     </div>
                   </div>
                 </div>

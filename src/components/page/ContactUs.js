@@ -77,10 +77,10 @@ const ContactUs = (props) => {
           <br />
           <br />
           <div className="container">
-            <div class="row">
-              <div class="col-md-6 col-xs-12 mt-4">
-                <div class="address-block-two mb-40 sm-mb-20">
-                  <h5 class="title">US</h5>
+            <div className="row">
+              <div className="col-md-6 col-xs-12 mt-4">
+                <div className="address-block-two mb-40 sm-mb-20">
+                  <h5 className="title">US</h5>
                   <p>{contactAddressNew[0]?.name_us}</p>
                   <p>
                     <a href="maitto:{contactAddressNew[0]?.email_us}">
@@ -95,9 +95,9 @@ const ContactUs = (props) => {
                 </div>
               </div>
 
-              <div class="col-md-6 col-xs-12 mt-4">
-                <div class="address-block-two mb-40 sm-mb-20">
-                  <h5 class="title">India</h5>
+              <div className="col-md-6 col-xs-12 mt-4">
+                <div className="address-block-two mb-40 sm-mb-20">
+                  <h5 className="title">India</h5>
                   <p>{contactAddressNew[0]?.name_in}</p>
                   <p>
                     <a href="maitto:{contactAddressNew[0]?.email_in}">
@@ -112,9 +112,9 @@ const ContactUs = (props) => {
                 </div>
               </div>
 
-              <div class="col-md-6 col-xs-12 mt-4">
-                <div class="address-block-two mb-40 sm-mb-20">
-                  <h5 class="title">Singapore</h5>
+              <div className="col-md-6 col-xs-12 mt-4">
+                <div className="address-block-two mb-40 sm-mb-20">
+                  <h5 className="title">Singapore</h5>
                   <p>{contactAddressNew[0]?.name_si}</p>
                   <p>
                     <a href="maitto:{contactAddressNew[0]?.email_si}">
@@ -129,9 +129,9 @@ const ContactUs = (props) => {
                 </div>
               </div>
 
-              <div class="col-md-6 col-xs-12 mt-4">
-                <div class="address-block-two mb-40 sm-mb-20">
-                  <h5 class="title">Philippines</h5>
+              <div className="col-md-6 col-xs-12 mt-4">
+                <div className="address-block-two mb-40 sm-mb-20">
+                  <h5 className="title">Philippines</h5>
                   <p>{contactAddressNew[0]?.name_ph}</p>
                   <p>
                     <a href="maitto:{contactAddressNew[0]?.email_ph}">

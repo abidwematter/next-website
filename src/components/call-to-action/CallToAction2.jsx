@@ -1,9 +1,11 @@
-import React, {Fragment} from 'react';
+import 'server-only';
+import React, { Fragment } from 'react';
 import Link from 'next/link';
 
 const CallToAction2 = (props) => {
     return (
         <Fragment>
+            {console.log("CallToAction2")}
             <div className="row align-items-center gx-xxl-5">
                 <div className="col-lg-6 text-center text-lg-start" data-aos="fade-right">
                     <div className="sub-title">{props?.data?.sec10_1}</div>
