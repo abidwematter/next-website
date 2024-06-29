@@ -37,7 +37,7 @@ import WinnerPhoto from "./WinnerPhoto";
 import Registartion from "./Registartion";
 import { IMG_URL } from "../../shared/constent/img";
 import ContactUs from "./ContactUs";
-// import WinnerList from './WinnerList';
+import WinnerList from './WinnerList';
 import Cookies from "./Cookies";
 
 // export const metadata = {
@@ -189,6 +189,10 @@ const PageComponent = () => {
       ) : (
         ""
       )}
+
+{
+        pageData[0]?.page_layout == 'Winners' ? <WinnerList data={pageData[0]} /> : ''
+      }
 
       {/* ***************************************************************************** */}
 
