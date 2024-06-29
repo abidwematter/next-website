@@ -21,9 +21,9 @@ const Faq = (props) => {
                             </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel className="accordion-body fadeInUp">
-                            <p>
-                                <p dangerouslySetInnerHTML={{ __html: (item.faq_content) }} />
-                            </p>
+                            {/* <p> */}
+                            <p dangerouslySetInnerHTML={{ __html: (item.faq_content) }} />
+                            {/* </p> */}
                         </AccordionItemPanel>
                     </AccordionItem>
                 ))}
