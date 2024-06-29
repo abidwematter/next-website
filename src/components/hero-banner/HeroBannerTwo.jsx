@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import './heroBannerTwo.scss'
-
+import Link from 'next/link'
 const HeroBannerTwo = (props) => {
     const imgUrl = 'https://api.we-matter.com/assets/admin/uploads/'
     return (
@@ -18,10 +18,10 @@ const HeroBannerTwo = (props) => {
                                         <p className="text-lg pt-25 pb-40 lg-pb-20 sm-pt-10">{item?.ban1_2}</p>
                                         <ul className="style-none button-group d-sm-flex align-items-center">
                                             <li className="me-4 mt-10">
-                                                <a href={item?.ban1_9} className="btn-one ripple-btn">{item?.ban1_3}</a>
+                                                <Link href='/solution' className="btn-one ripple-btn">{item?.ban1_3}</Link>
                                                 </li>
                                             <li>
-                                                <a className="demo-btn tran3s mt-10" href={item?.ban1_10}>{item?.ban1_4}</a>
+                                                <Link className="demo-btn tran3s mt-10" href='/registration'>{item?.ban1_4}</Link>
                                                 </li>
                                         </ul>
                                     </div>

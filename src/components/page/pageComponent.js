@@ -1,4 +1,5 @@
 
+'use client';
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import InnerBanner from "../page-title/InnerBanner";
@@ -44,6 +45,8 @@ import Cookies from "./Cookies";
 //   title: "W.E. Matter",
 //   description: "The official Next.js Learn Dashboard built with App Router.",
 // };
+
+
 
 const PageComponent = () => {
   let slug = useParams();

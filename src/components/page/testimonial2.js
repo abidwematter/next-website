@@ -55,8 +55,7 @@ const ImageList = (props) => {
 
   return (
     <>
-      {console.log("testimonial2")}
-      <div className="row mt-40">
+      <div className="row mt-40 " >
         {props?.data.map((image, imageindex) => (
           <div className="col-md-2 col-4" key={imageindex}>
             <div>

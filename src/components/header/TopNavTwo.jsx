@@ -55,7 +55,7 @@ const TopNavTwo = () => {
     }, []);
   return (
     <Fragment>
-        <SearchModal  isOpen={modalIsOpen} onClick={closeModal} bgColor="" />
+        {/* <SearchModal  isOpen={modalIsOpen} onClick={closeModal} bgColor="" /> */}
          <header className={navbar ? "theme-main-menu sticky-menu theme-menu-two fixed": "theme-main-menu sticky-menu theme-menu-two"}>
                 <div className="inner-content">
                     <div className="top-header">
@@ -74,9 +74,9 @@ const TopNavTwo = () => {
                                         
                                         {/* <Link className="contact-slaes" href="/registration">Contact Sales</Link> */}
                                     </div> 
-                                    <button
+                                    {/* <button
                                         className="menu-search-btn tran3s m0"
-                                        type="button" onClick={openModal}><i className="bi bi-search"/></button>
+                                        type="button" onClick={openModal}><i className="bi bi-search"/></button> */}
                                 </div>
 
                                 </div>
