@@ -10,14 +10,15 @@ export async function generateMetadata({ params }) {
 
   let url = API_CONSTANTS.page.replace("abc", params.pageComponent);
   const pageData = await HttpFetchService().GET(url);
+  console.log(pageData[0], 'pageData 01/7')
 
   const homeSetting = await HomeSetting();
 
 
   return {
     title: pageData[0]?.meta_title,
-    keywords: homeSetting[0]?.meta_keyword_home,
-    description: homeSetting[0]?.meta_description_home,
+    keywords: pageData[0] ?.meta_keyword_home,
+    description: pageData[0]?.meta_description_home,
   }
 }
 
