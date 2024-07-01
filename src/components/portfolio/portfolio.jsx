@@ -1,7 +1,7 @@
 // "use client";
 // import "server-only";
 import React, { Fragment } from "react";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+// import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Link from "next/link";
 import Lightbox from "react-image-lightbox";

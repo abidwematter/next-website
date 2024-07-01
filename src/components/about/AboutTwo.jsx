@@ -96,7 +96,7 @@ const AboutTwo = (props) => {
           />
           {/* <img  src={`${imgUrl}${props?.data?.secimg4_2}`} alt="" className="shapes shape-one fortune-image" /> */}
           <Image
-            src={`${imgUrl}${props?.data?.secimg4_2}`} alt="" width={100} height={500} className="shapes shape-one fortune-image" />
+            src={`${imgUrl}${props?.data?.secimg4_2}`} alt="" width={400} height={500} className="shapes shape-one fortune-image" />
 
           {/* {console.log(`${imgUrl}${props?.data?.secimg4_6}`)} */}
           {/* <img
