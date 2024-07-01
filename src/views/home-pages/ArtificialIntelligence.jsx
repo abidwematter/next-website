@@ -264,7 +264,7 @@ const ArtificialIntelligence = async () =>
                     <Skill data={val} />
                     {/* /.skills-progress */}
                     <a
-                      href={val?.sec6_7}
+                      href="./interventions"
                       className="btn-five ripple-btn mt-60 lg-mt-50"
                     >
                       {val?.sec6_6}
@@ -365,7 +365,7 @@ const ArtificialIntelligence = async () =>
                     </div>
                     {/* /.title-style-one */}
                     <p className="pt-10 pb-15">{val?.sec8_3}</p>
-                    <a href={val?.sec8_5} className="btn-five ripple-btn">
+                    <a href="./registration" className="btn-five ripple-btn">
                       {val?.sec8_4}
                     </a>
                   </div>

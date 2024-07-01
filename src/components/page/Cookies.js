@@ -1,39 +1,39 @@
-'use client';   
-import React from 'react';
-import './cookies.css'
+'use client';
+import React, { useEffect, useState } from 'react';
+import './cookies.css';
 import axios from "axios";
-import { useEffect } from 'react';
-import { useState } from 'react';
 
 const Cookies = () => {
     const [ip, setIP] = useState('');
-    const [Ipaddress,setIpaddress] = useState('')
+    const [Ipaddress, setIpaddress] = useState('');
 
     useEffect(() => {
-        let data = localStorage.getItem('ip')
-        if(data) {
-            setIpaddress(data)
+        // Fetch IP address from local storage if available
+        let data = localStorage.getItem('ip');
+        if (data) {
+            setIpaddress(data);
+        } else {
+            // Fetch IP address from API if not found in local storage
+            getData();
         }
-        getData();
     }, []);
 
     const getData = async () => {
-        const res = await axios.get("https://ipapi.co/json/");
-        setIP(res?.data?.ip);
+        try {
+            const res = await axios.get("https://ipapi.co/json/");
+            const ipAddress = res?.data?.ip;
+            setIP(ipAddress);
+        } catch (error) {
+            console.error("Failed to fetch IP address", error);
+        }
     };
 
-   
-
-    // window.onbeforeunload = () => {
-    //     localStorage.removeItem('ip');
-    //   }
-
-
-    const hundleClick = () => {
-        localStorage.setItem('ip', ip);
-        setIpaddress(localStorage.getItem('ip'))
-    }
-
+    const hundleClick  = () => {
+        if (ip) {
+            localStorage.setItem('ip', ip);
+            setIpaddress(ip);
+        }
+    };
     return (
         <>
             {

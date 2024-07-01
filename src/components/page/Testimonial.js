@@ -31,10 +31,10 @@ const Testimonial = (props) => {
           </div>
         </div>
       <div
-        className="feedback-section-three"
+        className="feedback-section-three  "
         data-aos="fade-up">
         <div className="container">
-          <div className="slider-wrapper mt-100" >
+          <div className="slider-wrapper  mb-100 " >
             <TestimonialThree data={data}/> 
           </div>
           {/* /.slider-wrapper */}
